@@ -1,4 +1,4 @@
-const { Creator } = require('../../models');
+const { Creator } = require('../models');
 
 const seedCreator = async () => {
 
