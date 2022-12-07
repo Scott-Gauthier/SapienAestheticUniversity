@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+node_modules
+.env
+.DS_Store
+=======
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+>>>>>>> a646a80f0954133fd21bc3cd3dbfb749d26fc4fa
