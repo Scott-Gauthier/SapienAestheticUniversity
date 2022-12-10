@@ -1,10 +1,10 @@
 import React from 'react';
 
-function SignUpForm(props) {
+function ClassCard(props) {
     console.log(props);
     return (
         <div>Card</div>
     )
 }
 
-export default SignUpForm;
+export default ClassCard;
