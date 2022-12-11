@@ -3,6 +3,7 @@ import AppNavbar from './components/AppNavbar';
 // import logo from './logo.svg';
 // import './App.css';
 // import Header from './components/Header';
+import Footer from './components/Footer';
 import ClassPage from './pages/ClassPage';
 import InstructorPage from './pages/InstructorPage';
 import StudentPage from './pages/StudentPage';
@@ -17,6 +18,10 @@ function App() {
           <Route 
             path='/' 
             element={<ClassPage/>} 
+          />
+          <Route 
+            path='/' 
+            element={<Footer/>} 
           />
           <Route 
             path='/instructor' 
