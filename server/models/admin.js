@@ -26,22 +26,10 @@ const adminSchema = new Schema({
 }
 );
 
-userSchema.pre('save', async function (next) {
-  if (this.isNew || this.isModified('password')) {
-    const saltRounds = 10;
-    this.password = await bcrypt.hash(this.password, saltRounds);
-  }
-  next();
-});
-
+// custom method to compare and validate password for logging in
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 }
-
-// Create a virtual property `friendCount` that gets the amount of friends per post
-adminSchema.virtual('friendCount').get(function () {
-  return this.friends.length;
-});
 
 const Admin = model('admin', adminSchema);
 
