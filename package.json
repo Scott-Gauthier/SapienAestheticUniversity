@@ -4,17 +4,21 @@
     "description": "",
     "main": "server/server.js",
     "scripts": {
-      "start": "node server --ignore client",
-      "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
-      "install": "cd server && npm i && cd ../client && npm i",
-      "seed": "cd server && npm run seed",
-      "build": "cd client && npm run build"
+        "start": "node server --ignore client",
+        "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
+        "install": "cd server && npm i && cd ../client && npm i",
+        "seed": "cd server && npm run seed",
+        "build": "cd client && npm run build"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-      "concurrently": "^5.1.0"
+        "concurrently": "^5.1.0"
+    },
+    "dependencies": {
+        "bootstrap": "^5.2.3",
+        "mdb-react-ui-kit": "^5.0.0",
+        "react-bootstrap": "^2.7.0"
     }
-  }
-  
+}
