@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const adminSchema = new Schema({
   adminname: {
@@ -16,20 +17,26 @@ const adminSchema = new Schema({
   password: {
     type: String,
     required: true,
+    bcrypt: true,
   }
 },
-{
-  toJSON: {
-    virtuals: true,
-  },
-  id: false,
-}
+// {
+//   toJSON: {
+//     virtuals: true,
+//   },
+//   id: false,
+// }
 );
 
 // custom method to compare and validate password for logging in
 adminSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 }
+
+// // Create a virtual property `friendCount` that gets the amount of friends per post
+// adminSchema.virtual('friendCount').get(function () {
+//   return this.friends.length;
+// });
 
 const Admin = model('admin', adminSchema);
 
