@@ -13,11 +13,10 @@ const adminSchema = new Schema({
     unique: true,
     match: [/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/, 'Must match an email address!'],
   },
-  friends: [{
-    type: Schema.Types.ObjectId,
-    ref: 'user',
-  }],
-  
+  password: {
+    type: String,
+    required: true,
+  }
 },
 {
   toJSON: {
