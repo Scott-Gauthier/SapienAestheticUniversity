@@ -1,8 +1,9 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+SALT_WORK_FACTOR = 10;
 
-const adminSchema = new Schema({
-  adminname: {
+const userSchema = new Schema({
+  username: {
     type: String,
     unique: true,
     required: true,
@@ -17,18 +18,17 @@ const adminSchema = new Schema({
   password: {
     type: String,
     required: true,
-    bcrypt: true,
   }
 },
-// {
-//   toJSON: {
-//     virtuals: true,
-//   },
-//   id: false,
-// }
+{
+  toJSON: {
+    virtuals: true,
+  },
+  id: false,
+}
 );
 
-adminSchema.pre('save', async function (next) {
+userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
@@ -36,15 +36,18 @@ adminSchema.pre('save', async function (next) {
   next();
 });
 
-adminSchema.methods.isCorrectPassword = async function (password) {
+
+
+
+userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 }
 
-// // Create a virtual property `friendCount` that gets the amount of friends per post
-// adminSchema.virtual('friendCount').get(function () {
-//   return this.friends.length;
-// });
+// Create a virtual property `friendCount` that gets the amount of friends per post
+userSchema.virtual('friendCount').get(function () {
+  return this.friends.length;
+});
 
-const Admin = model('admin', adminSchema);
+const User = model('user', userSchema);
 
-module.exports = Admin;
+module.exports = User;

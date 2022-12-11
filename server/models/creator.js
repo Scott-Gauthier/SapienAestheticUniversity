@@ -18,12 +18,12 @@ const creatorSchema = new Schema({
     required: true,
   }
 },
-{
-  toJSON: {
-    virtuals: true,
-  },
-  id: false,
-}
+// {
+//   toJSON: {
+//     virtuals: true,
+//   },
+//   id: false,
+// }
 );
 
 creatorSchema.pre('save', async function (next) {
@@ -38,10 +38,10 @@ creatorSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 }
 
-// Create a virtual property `friendCount` that gets the amount of friends per post
-creatorSchema.virtual('friendCount').get(function () {
-  return this.friends.length;
-});
+// // Create a virtual property `friendCount` that gets the amount of friends per post
+// creatorSchema.virtual('friendCount').get(function () {
+//   return this.friends.length;
+// });
 
 const Creator = model('creator', creatorSchema);
 
