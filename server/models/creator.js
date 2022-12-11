@@ -17,7 +17,10 @@ const creatorSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'user',
   }],
-  
+  password: {
+    type: String,
+    required: true,
+  }
 },
 {
   toJSON: {
