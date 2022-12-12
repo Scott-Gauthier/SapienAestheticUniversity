@@ -18,12 +18,12 @@ const creatorSchema = new Schema({
     required: true,
   }
 },
-// {
-//   toJSON: {
-//     virtuals: true,
-//   },
-//   id: false,
-// }
+  // {
+  //   toJSON: {
+  //     virtuals: true,
+  //   },
+  //   id: false,
+  // }
 );
 
 creatorSchema.pre('save', async function (next) {
@@ -34,8 +34,15 @@ creatorSchema.pre('save', async function (next) {
   next();
 });
 
-// custom method to compare and validate password for logging in
-creatorSchema.methods.isCorrectPassword = async function (password) {
+creatorSchema.pre('save', async function (next) {
+  if (this.isNew || this.isModified('password')) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
+  }
+  next();
+});
+
+userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 }
 
