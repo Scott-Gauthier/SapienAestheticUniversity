@@ -1,54 +1,49 @@
-// import user model
 const { Creator } = require('../models');
-// import sign token function from auth
 const { signToken } = require('../utils/auth');
 
 module.exports = {
-  // get a single user by either their id or their username
-  async getSingleCreator({ user = null, params }, res) {
+  async getSingleCreator({ creator = null, params }, res) {
     const foundCreator = await Creator.findOne({
-      $or: [{ _id: user ? user._id : params.id }, { username: params.username }],
+      $or: [{ _id: creator ? creator._id : params.id }, { username: params.username }],
     });
 
     if (!foundCreator) {
-      return res.status(400).json({ message: 'Cannot find a user with this id!' });
+      return res.status(400).json({ message: 'Cannot find a creator with this id!' });
     }
 
     res.json(foundCreator);
   },
-  // create a user, sign a token, and send it back (to client/src/components/SignUpForm.js)
-  async createCreator({ body }, res) {
-    const user = await Creator.create(body);
 
-    if (!user) {
+  async createCreator({ body }, res) {
+    const creator = await Creator.create(body);
+
+    if (!creator) {
       return res.status(400).json({ message: 'Something is wrong!' });
     }
-    const token = signToken(user);
-    res.json({ token, user });
+    const token = signToken(creator);
+    res.json({ token, creator });
   },
-  // login a user, sign a token, and send it back (to client/src/components/LoginForm.js)
-  // {body} is destructured req.body
+
   async login({ body }, res) {
-    const user = await Creator.findOne({ $or: [{ username: body.username }, { email: body.email }] });
-    if (!user) {
-      return res.status(400).json({ message: "Can't find this user" });
+    const creator = await Creator.findOne({ $or: [{ username: body.username }, { email: body.email }] });
+    if (!creator) {
+      return res.status(400).json({ message: "Can't find this creator" });
     }
 
-    const correctPw = await user.isCorrectPassword(body.password);
+    const correctPw = await creator.isCorrectPassword(body.password);
 
     if (!correctPw) {
       return res.status(400).json({ message: 'Wrong password!' });
     }
-    const token = signToken(user);
-    res.json({ token, user });
+    const token = signToken(creator);
+    res.json({ token, creator });
   },
-  // save a book to a user's `savedBooks` field by adding it to the set (to prevent duplicates)
-  // user comes from `req.user` created in the auth middleware function
-  async saveBook({ user, body }, res) {
-    console.log(user);
+
+  async saveBook({ creator, body }, res) {
+    console.log(creator);
     try {
       const updatedCreator = await Creator.findOneAndUpdate(
-        { _id: user._id },
+        { _id: creator._id },
         { $addToSet: { savedBooks: body } },
         { new: true, runValidators: true }
       );
@@ -58,15 +53,15 @@ module.exports = {
       return res.status(400).json(err);
     }
   },
-  // remove a book from `savedBooks`
-  async deleteBook({ user, params }, res) {
+
+  async deleteBook({ creator, params }, res) {
     const updatedCreator = await Creator.findOneAndUpdate(
-      { _id: user._id },
+      { _id: creator._id },
       { $pull: { savedBooks: { bookId: params.bookId } } },
       { new: true }
     );
     if (!updatedCreator) {
-      return res.status(404).json({ message: "Couldn't find user with this id!" });
+      return res.status(404).json({ message: "Couldn't find creator with this id!" });
     }
     return res.json(updatedCreator);
   },
