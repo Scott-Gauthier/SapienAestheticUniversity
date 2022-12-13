@@ -13,7 +13,7 @@ function Footer() {
   return (
     <MDBFooter className='text-center' color='white' bgColor='dark'>
       <MDBContainer className='p-4'>
-        <section className='mb-4'>
+        {/* <section className='mb-4'>
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
             <MDBIcon fab icon='facebook-f' />
           </MDBBtn>
@@ -37,9 +37,9 @@ function Footer() {
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
             <MDBIcon fab icon='github' />
           </MDBBtn>
-        </section>
+        </section> */}
 
-        <section className=''>
+        {/* <section className=''>
           <form action=''>
             <MDBRow className='d-flex justify-content-center'>
               <MDBCol size="auto">
@@ -59,7 +59,7 @@ function Footer() {
               </MDBCol>
             </MDBRow>
           </form>
-        </section>
+        </section> */}
 
         <section className='mb-4'>
           <p>
