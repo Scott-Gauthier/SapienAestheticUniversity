@@ -16,7 +16,11 @@ var userSchema = new Schema({
     password: { 
         type: String, 
         required: true 
-    }
+    },
+    content: [{
+      type: Schema.Types.ObjectId,
+      ref: 'content',
+  }],
 },
 // {
 //   toJSON: {
