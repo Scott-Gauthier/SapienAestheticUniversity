@@ -1,3 +1,4 @@
+
 const { Creator } = require('../models');
 const { signToken } = require('../utils/auth');
 
@@ -9,6 +10,7 @@ module.exports = {
 
     if (!foundCreator) {
       return res.status(400).json({ message: 'Cannot find a creator with this id!' });
+
     }
 
     res.json(foundCreator);
@@ -32,9 +34,11 @@ module.exports = {
 
     const correctPw = await creator.isCorrectPassword(body.password);
 
+
     if (!correctPw) {
       return res.status(400).json({ message: 'Wrong password!' });
     }
+
     const token = signToken(creator);
     res.json({ token, creator });
   },
@@ -57,6 +61,7 @@ module.exports = {
   async deleteBook({ creator, params }, res) {
     const updatedCreator = await Creator.findOneAndUpdate(
       { _id: creator._id },
+
       { $pull: { savedBooks: { bookId: params.bookId } } },
       { new: true }
     );

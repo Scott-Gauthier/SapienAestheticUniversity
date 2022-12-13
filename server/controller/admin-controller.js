@@ -10,13 +10,11 @@ module.exports = {
     if (!foundAdmin) {
       return res.status(400).json({ message: 'Cannot find a admin with this id!' });
     }
-
     res.json(foundAdmin);
   },
-
+  
   async createAdmin({ body }, res) {
     const admin = await Admin.create(body);
-
     if (!admin) {
       return res.status(400).json({ message: 'Something is wrong!' });
     }
@@ -32,9 +30,11 @@ module.exports = {
 
     const correctPw = await admin.isCorrectPassword(body.password);
 
+
     if (!correctPw) {
       return res.status(400).json({ message: 'Wrong password!' });
     }
+
     const token = signToken(admin);
     res.json({ token, admin });
   },
@@ -57,11 +57,12 @@ module.exports = {
   async deleteBook({ admin, params }, res) {
     const updatedAdmin = await Admin.findOneAndUpdate(
       { _id: admin._id },
+
       { $pull: { savedBooks: { bookId: params.bookId } } },
       { new: true }
     );
     if (!updatedAdmin) {
-      return res.status(404).json({ message: "Couldn't find admin with this id!" });
+      return res.status(404).json({ message: "Couldn't find user with this id!" });
     }
     return res.json(updatedAdmin);
   },

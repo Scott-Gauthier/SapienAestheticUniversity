@@ -26,28 +26,18 @@ var userSchema = new Schema({
 // }
 );
 
-userSchema.pre("save", function (next) {
-  const user = this
-
-  if (this.isModified("password") || this.isNew) {
-    bcrypt.genSalt(10, function (saltError, salt) {
-      if (saltError) {
-        return next(saltError)
-      } else {
-        bcrypt.hash(user.password, salt, function(hashError, hash) {
-          if (hashError) {
-            return next(hashError)
-          }
-
-          user.password = hash
-          next()
-        })
-      }
-    })
-  } else {
-    return next()
+userSchema.pre('save', async function (next) {
+  if (this.isNew || this.isModified('password')) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
   }
-})
+  next();
+});
+
+// custom method to compare and validate password for logging in
+userSchema.methods.isCorrectPassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+}
 
 // // Create a virtual property `friendCount` that gets the amount of friends per post
 // userSchema.virtual('friendCount').get(function () {
