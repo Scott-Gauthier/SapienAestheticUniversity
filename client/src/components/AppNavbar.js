@@ -17,14 +17,17 @@ const AppNavbar = () => {
           <Navbar.Brand as={Link} to='/'>
             <h1>Sapien Aesthetic University</h1>
           </Navbar.Brand>
+          
           <Navbar.Toggle aria-controls='navbar' />
-          <Navbar.Collapse id='navbar'>
-            <Nav className='ml-auto'>
-              <Nav.Link as={Link} to='/'>
-                Search for Classes
-              </Nav.Link>
-              <Nav.Link onClick={() => setShowModal(true)}>Login or Sign Up
-              </Nav.Link>
+            <Navbar.Collapse id='navbar'>
+              <Nav className='ml-auto'>
+              
+                <Nav.Link as={Link} to='/'>
+                  Search for Classes
+                </Nav.Link>
+              
+                <Nav.Link onClick={() => setShowModal(true)}>Login or Sign Up
+                </Nav.Link>
 
               {/* if user is logged in show saved books and logout */}
               {/* {Auth.loggedIn() ? (
@@ -42,6 +45,7 @@ const AppNavbar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      
       {/* set modal data up */}
       <Modal
         size='lg'
@@ -62,6 +66,7 @@ const AppNavbar = () => {
               </Nav>
             </Modal.Title>
           </Modal.Header>
+          
           <Modal.Body>
             <Tab.Content>
               <Tab.Pane eventKey='login'>

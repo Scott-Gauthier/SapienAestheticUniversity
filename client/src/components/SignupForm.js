@@ -4,7 +4,6 @@ import { Form, Button } from 'react-bootstrap';
 // import Auth from '../utils/Auth';
 
 function SignupForm() { 
-
   return (
     <Form>
         <Form.Group className="mb-3">
