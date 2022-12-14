@@ -15,7 +15,7 @@ const resolvers = {
             }
             throw new AuthenticationError(`The user is not logged in`);
         },
-        allContent: async(parent, args, context) => {
+        allContent: async(parent, { _id }, context) => {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
                 .select(`-_v -password`)
@@ -66,7 +66,7 @@ const resolvers = {
             if (context.user) {
                 const updatedUser = await User.findOneAndUpdate(
                     { _id: context.user_id },
-                    { $addToSet: { savedBooks: args.bookId }},
+                    { $addToSet: { savedContent: args.title }},
                     { new: true }                    
                 );
                 return updatedUser;

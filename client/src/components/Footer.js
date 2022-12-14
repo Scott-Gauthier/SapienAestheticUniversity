@@ -9,31 +9,40 @@ import {
   MDBBtn
 } from 'mdb-react-ui-kit';
 
+//added position-right to test footer
+const styles ={
+  footer: {
+    textDecoration: 'none',
+    background: 'dark',
+    color: 'white',
+    position: 'fixed',
+    left: '0',
+    bottom: '0',
+    right: '0',
+    
+  }
+}
+
 function Footer() {
   return (
-    <MDBFooter className='text-center' color='white' bgColor='dark'>
+    <MDBFooter className='text-center' color='white' bgColor='dark' position='fixed'>
       <MDBContainer className='p-4'>
         {/* <section className='mb-4'>
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
             <MDBIcon fab icon='facebook-f' />
           </MDBBtn>
-
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
             <MDBIcon fab icon='twitter' />
           </MDBBtn>
-
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
             <MDBIcon fab icon='google' />
           </MDBBtn>
-
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
             <MDBIcon fab icon='instagram' />
           </MDBBtn>
-
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
             <MDBIcon fab icon='linkedin-in' />
           </MDBBtn>
-
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
             <MDBIcon fab icon='github' />
           </MDBBtn>
@@ -47,11 +56,9 @@ function Footer() {
                   <strong>Sign up for our newsletter</strong>
                 </p>
               </MDBCol>
-
               <MDBCol md='5' start>
                 <MDBInput contrast type='email' label='Email address' className='mb-4' />
               </MDBCol>
-
               <MDBCol size="auto">
                 <MDBBtn outline color='light' type='submit' className='mb-4'>
                   Subscribe
@@ -74,15 +81,24 @@ function Footer() {
                 <li>
                   <a href='#!' className='text-white'>
                     Who Are We?
+
                   </a>
                 </li>
                 <li>
                   <a href='#!' className='text-white'>
                     Careers
+
                   </a>
                 </li>
                 <li>
                   <a href='#!' className='text-white'>
+
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href='#!' className='text-white'>
+
                     Blog
                   </a>
                 </li>
