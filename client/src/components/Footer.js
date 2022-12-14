@@ -22,6 +22,7 @@ const styles ={
     
   }
 }
+
 function Footer() {
   return (
     <MDBFooter className='text-center' color='white' bgColor='dark' position='fixed'>
@@ -80,15 +81,24 @@ function Footer() {
                 <li>
                   <a href='#!' className='text-white'>
                     Who Are We?
+
                   </a>
                 </li>
                 <li>
                   <a href='#!' className='text-white'>
                     Careers
+
                   </a>
                 </li>
                 <li>
                   <a href='#!' className='text-white'>
+
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href='#!' className='text-white'>
+
                     Blog
                   </a>
                 </li>
