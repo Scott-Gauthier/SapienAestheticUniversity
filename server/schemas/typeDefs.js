@@ -19,7 +19,7 @@ const typeDefs = gql`
     }
 
     type Auth {
-        token: ID!
+        token: ID
         user: User
     }
 
@@ -35,7 +35,6 @@ const typeDefs = gql`
         saveContent(content: Content!): Content
         removeContent(content: Content!): Auth
     }
-
     `;
 
 module.exports = typeDefs;
