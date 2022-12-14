@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 import ReactPlayer from 'react-player'
-import ClassCard from "../components/ClassCard";
+// import ClassCard from "../components/ClassCard";
 
 function ClassPage(){
     // use hooks to get list of all classes with graphql or routes
