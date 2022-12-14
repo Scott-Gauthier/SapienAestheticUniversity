@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import ReactPlayer from 'react-player'
 import ClassCard from "../components/ClassCard";
 
 function ClassPage(){
@@ -6,6 +7,9 @@ function ClassPage(){
     return(
         <main>
             <h2>This is a page for all classes</h2>
+
+            <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
+            
         </main>
     )
 };

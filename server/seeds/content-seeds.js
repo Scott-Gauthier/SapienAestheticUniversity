@@ -13,7 +13,6 @@ const data =  await Content.insertMany(
       ],
     ).then((err) =>
     err ? console.log(err) : console.log('Inserted'));
-
 }
 
 module.exports = {seedContent};

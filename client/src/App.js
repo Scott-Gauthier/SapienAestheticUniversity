@@ -12,7 +12,6 @@ function App() {
 
   return (
    <Router>
-      
         <AppNavbar/>
         <Routes>
           <Route 
@@ -33,9 +32,7 @@ function App() {
           />
         </Routes>
         <Footer/>
-       
     </Router>
-
   );
 }
 

@@ -12,7 +12,6 @@ const data = [
     ];
    
  const work = await data.forEach((item) => User.create(item));
-
 }
 
 module.exports = {seedUser};
