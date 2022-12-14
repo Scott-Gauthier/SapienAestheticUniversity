@@ -10,6 +10,7 @@ const data =  await Creator.insertMany(
         { creatorname: 'Dan', email: 'Dan@Dan.com', password: 'password12345' }, 
         { creatorname: 'Lyndsey', email: 'Lyndsey@Lyndsey.com', password: 'password12345' }, 
         { creatorname: 'Scott', email: 'Scott@Scott.com', password: 'password12345' }, 
+      ],
     ).then((err) =>
     err ? console.log(err) : console.log('Inserted'));
 }
