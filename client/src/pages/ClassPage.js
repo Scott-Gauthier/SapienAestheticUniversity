@@ -1,5 +1,5 @@
 import React from "react";
-import ReactPlayer from 'react-player'
+// import ReactPlayer from 'react-player'
 // import ClassCard from "../components/ClassCard";
 
 function ClassPage(){
@@ -7,7 +7,8 @@ function ClassPage(){
     return(
         <main>
             <h2>This is a page for all classes</h2>
-            <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
+            <a href = './client/src/assets/videos/Jess-VitaminA.mp4'>
+            </a>
         </main>
     )
 };
