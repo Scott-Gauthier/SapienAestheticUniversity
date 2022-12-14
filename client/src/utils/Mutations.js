@@ -24,7 +24,6 @@ export const ADD_USER = gql`
   }
 `;
 
-
 export const ADD_CONTENT = gql`
   mutation addContent($content: [ID]!) {
     addContent(content: $content) {
