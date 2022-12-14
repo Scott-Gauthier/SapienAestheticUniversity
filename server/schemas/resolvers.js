@@ -2,11 +2,20 @@ const { User } = require(`../models`);
 const { Creator } = require(`../models`);
 const { Admin } = require(`../models`);
 const { signToken } = require(`../utils/auth`);
-const { AuthenticationError } = require(`apollo-server-express`); 
+const { AuthenticationError } = require(`apollo-server-express`);
+const stripe = require('stripe'); 
 
 const resolvers = {
     Query: {
-        me: async(parent, args, context) => {
+        User: async(parent, args, context) => {
+            if (context.user) {
+                const userData = await User.findOne({ _id: context.user._id })
+                .select(`-_v -password`)
+                return userData;
+            }
+            throw new AuthenticationError(`The user is not logged in`);
+        },
+        allContent: async(parent, args, context) => {
             if (context.user) {
                 const userData = await User.findOne({ _id: context.user._id })
                 .select(`-_v -password`)
@@ -21,7 +30,7 @@ const resolvers = {
             const token = signToken(user);
             return { user, token };
         },
-        login: async (parent, { email, password }) => {
+        loginUser: async (parent, { email, password }) => {
             const user = await User.findOne( { email });
             if (!user) {
                 throw new AuthenticationError(`Email or password was incorrect, please try again`)
@@ -33,7 +42,7 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        saveBook: async (parent, args , context) => {
+        addContent: async (parent, args , context) => {
             if (context.user) {
                 const updatedUser = await User.findOneAndUpdate(
                     { _id: context.user_id },
@@ -43,7 +52,17 @@ const resolvers = {
                 return updatedUser;
             }
         },
-        removeBook: async (parent, args, context) => {
+        saveContent: async (parent, args , context) => {
+            if (context.user) {
+                const updatedUser = await User.findOneAndUpdate(
+                    { _id: context.user_id },
+                    { $addToSet: { savedBooks: args.input }},
+                    { new: true }
+                )
+                return updatedUser;
+            }
+        },
+        removeContent: async (parent, args, context) => {
             if (context.user) {
                 const updatedUser = await User.findOneAndUpdate(
                     { _id: context.user_id },
@@ -54,7 +73,6 @@ const resolvers = {
             }
             throw new AuthenticationError(`The user must log in`)
         }
-        
     }
 }
 
