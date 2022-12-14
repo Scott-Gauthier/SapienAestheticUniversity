@@ -6,8 +6,8 @@ export const QUERY_ALL_CONTENT = gql`
       _id
       title
       description
-      creator
       cost
+      creator
       image
       quantity
     }
@@ -24,8 +24,8 @@ export const QUERY_USER = gql`
         contentId
         title
         description
+        cost 
         creator
-        cost
         image
         }
       }
