@@ -1,3 +1,4 @@
+
 import React, {useState} from "react";
 import ReactPlayer from 'react-player';
 // import ClassCard from "../components/ClassCard";
@@ -7,6 +8,7 @@ import NOAPP from './noteapp.png';
 
 function Portfolio(props) {
 
+<<<<<<< HEAD
     return (
   
       <Row xs={1} md={3} className="g-4">
@@ -98,3 +100,12 @@ function Portfolio(props) {
   }
   
   export default Portfolio;
+=======
+            {/* <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' /> */}
+
+        </main>
+    )
+};
+
+export default ClassPage;
+>>>>>>> 3e6b3021ff7377dcb220af7e20053611e989a30d

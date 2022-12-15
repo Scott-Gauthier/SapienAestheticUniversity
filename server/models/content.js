@@ -10,6 +10,9 @@ var contentSchema = new Schema({
     cost: {
         type: Number,
     },
+    video: {
+        type: String,
+    },
     creator: [{
         type: Schema.Types.ObjectId,
         ref: 'creator',
