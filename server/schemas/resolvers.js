@@ -14,13 +14,12 @@ const resolvers = {
             }
             throw new AuthenticationError(`The user is not logged in`);
         },
-        allContent: async(parent, { _id }, context) => {
-            if (context.content) {
-                const userData = await Content.findOne({ _id: context.user._id })
-                .select(`-_v -password`)
-                return userData;
+        allContent: async(parent, { title }) => {
+            const params = {};
+            if (title) {
+                params.title = title;
             }
-            throw new AuthenticationError(`The user is not logged in`);
+            return await Content.findById(params).populate('title');
         }
     },
     Mutation: {
@@ -43,32 +42,32 @@ const resolvers = {
         },
         addContent: async (parent, args , context) => {
             if (context.content) {
-                const updatedUser = await User.findOneAndUpdate(
+                const updatedContent = await Content.findOneAndUpdate(
                     { _id: context.user_id },
-                    { $addToSet: { savedContent: args.input }},
+                    { $push: { savedContent: args.input }},
                     { new: true }
                 )
-                return updatedUser;
+                return updatedContent;
             }
         },
         saveContent: async (parent, args , context) => {
-            if (context.user) {
-                const updatedUser = await User.findOneAndUpdate(
+            if (context.content) {
+                const updatedContent = await Content.findOneAndUpdate(
                     { _id: context.user_id },
                     { $addToSet: { savedContent: args.input }},
                     { new: true }
                 )
-                return updatedUser;
+                return updatedContent;
             }
         },
         removeContent: async (parent, args, context) => {
-            if (context.user) {
-                const updatedUser = await User.findOneAndUpdate(
+            if (context.content) {
+                const updatedContent = await Content.findOneAndUpdate(
                     { _id: context.user_id },
-                    { $addToSet: { savedContent: args.title }},
+                    { $addToSet: { savedContent: args.contentId }},
                     { new: true }                    
                 );
-                return updatedUser;
+                return updatedContent;
             }
             throw new AuthenticationError(`The user must log in`)
         }
