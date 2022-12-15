@@ -7,8 +7,6 @@ function ClassPage(){
     return(
         <main>
             <h2>This is a page for all classes</h2>
-            <a href = './client/src/assets/videos/Jess-VitaminA.mp4'>
-            </a>
         </main>
     )
 };
