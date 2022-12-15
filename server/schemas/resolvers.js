@@ -1,6 +1,5 @@
 const { User } = require(`../models`);
-const { Creator } = require(`../models`);
-const { Admin } = require(`../models`);
+const { Content } = require(`../models`);
 const { signToken } = require(`../utils/auth`);
 const { AuthenticationError } = require(`apollo-server-express`);
 const stripe = require('stripe'); 
@@ -16,8 +15,8 @@ const resolvers = {
             throw new AuthenticationError(`The user is not logged in`);
         },
         allContent: async(parent, { _id }, context) => {
-            if (context.user) {
-                const userData = await User.findOne({ _id: context.user._id })
+            if (context.content) {
+                const userData = await Content.findOne({ _id: context.user._id })
                 .select(`-_v -password`)
                 return userData;
             }
@@ -43,10 +42,10 @@ const resolvers = {
             return { token, user };
         },
         addContent: async (parent, args , context) => {
-            if (context.user) {
+            if (context.content) {
                 const updatedUser = await User.findOneAndUpdate(
                     { _id: context.user_id },
-                    { $addToSet: { savedBooks: args.input }},
+                    { $addToSet: { savedContent: args.input }},
                     { new: true }
                 )
                 return updatedUser;
@@ -56,7 +55,7 @@ const resolvers = {
             if (context.user) {
                 const updatedUser = await User.findOneAndUpdate(
                     { _id: context.user_id },
-                    { $addToSet: { savedBooks: args.input }},
+                    { $addToSet: { savedContent: args.input }},
                     { new: true }
                 )
                 return updatedUser;
