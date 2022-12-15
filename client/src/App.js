@@ -7,12 +7,12 @@ import ClassPage from './pages/ClassPage';
 import InstructorPage from './pages/InstructorPage';
 import StudentPage from './pages/StudentPage';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function App() {
 
   return (
    <Router>
-      
         <AppNavbar/>
         <Routes>
           <Route 
@@ -33,9 +33,7 @@ function App() {
           />
         </Routes>
         <Footer/>
-       
     </Router>
-
   );
 }
 

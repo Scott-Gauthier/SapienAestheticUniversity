@@ -9,7 +9,6 @@ export const QUERY_ALL_CONTENT = gql`
       cost
       creator
       image
-      quantity
     }
   }
 `;
