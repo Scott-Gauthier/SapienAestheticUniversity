@@ -1,6 +1,16 @@
 const { gql } = require(`apollo-server-express`);
 
 const typeDefs = gql`
+    input SavedContentInput {
+        _id: ID
+        title: String
+        description: String
+        cost: Float
+        creator: Creator
+        image: String
+        quantity: Int
+    }
+
     type User {
         _id: ID
         username: String
