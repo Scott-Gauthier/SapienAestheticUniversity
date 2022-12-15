@@ -18,12 +18,12 @@ function Portfolio(props) {
             <Card>
               <Card.Img variant="top" src={SU} />
               <Card.Body>
-                <Card.Title>Sapien University</Card.Title>
+                <Card.Title>ClassA</Card.Title>
                 <Card.Text>
-                  This was a freelance project I worked on with classmates from the UW bootcamp cohort. It is a website that provides education material for people in the skin care industry.
+                  akjdflakdsjfalkjsdflaksd
                 </Card.Text>
-                <Card.Link href="https://github.com/ManuelaKenna/SapienAestheticUniversity">Git Repo</Card.Link>
-                <Card.Link href="#">Link</Card.Link>
+                <Card.Link href="#">save </Card.Link>
+                <Card.Link href="#">delete</Card.Link>
               </Card.Body>
             </Card>
           </Col>
@@ -32,12 +32,12 @@ function Portfolio(props) {
             <Card>
               <Card.Img variant="top" src={Wtm} />
               <Card.Body>
-                <Card.Title>Trip to Mars - Javascript App</Card.Title>
+                <Card.Title>ClassB</Card.Title>
                 <Card.Text>
-                  This App is a goal setting app. 
+                  hello
                 </Card.Text>
-                <Card.Link href="https://github.com/ManuelaKenna/trip-to-mars">Git Repo</Card.Link>
-                <Card.Link href="https://manuelakenna.github.io/trip-to-mars/">Link</Card.Link>
+                <Card.Link href="#">Git Repo</Card.Link>
+                <Card.Link href="#">Link</Card.Link>
               </Card.Body>
             </Card>
           </Col>
@@ -46,12 +46,12 @@ function Portfolio(props) {
             <Card>
               <Card.Img variant="top" src={PWG} />
               <Card.Body>
-                <Card.Title>Password Generator</Card.Title>
+                <Card.Title>ClassC</Card.Title>
                 <Card.Text>
-                  This app is a random password generator.
+                  hello.
                 </Card.Text>
-                <Card.Link href="https://github.com/Lynchk07/PasswordGenerator">Git Repo</Card.Link>
-                <Card.Link href="https://lynchk07.github.io/PasswordGenerator/">Link</Card.Link>
+                <Card.Link href="#">Git Repo</Card.Link>
+                <Card.Link href="#">Link</Card.Link>
               </Card.Body>
             </Card>
           </Col>
@@ -59,12 +59,12 @@ function Portfolio(props) {
             <Card>
               <Card.Img variant="top" src={Bab} />
               <Card.Body>
-                <Card.Title>Books and Breweries</Card.Title>
+                <Card.Title>ClassD</Card.Title>
                 <Card.Text>
-                  This was a project created during my coursework for University of Washington Coding bootcamp. This website is a place where you can search for a good book and a brewery. Future development is creating a virtual library and book club. 
+                  hello. 
                 </Card.Text>
-                <Card.Link href="https://github.com/zeinabhared/BooksandBreweries">Git Repo</Card.Link>
-                <Card.Link href="https://booksandbreweries2022.herokuapp.com/">Link</Card.Link>
+                <Card.Link href="#">Git Repo</Card.Link>
+                <Card.Link href="#">Link</Card.Link>
               </Card.Body>
             </Card>
           </Col>
@@ -72,12 +72,12 @@ function Portfolio(props) {
             <Card>
               <Card.Img variant="top" src={QU} />
               <Card.Body>
-                <Card.Title>Javascript Quiz App</Card.Title>
+                <Card.Title>ClassE</Card.Title>
                 <Card.Text>
-                  This was a project created during my coursework for University of Washington Coding bootcamp. This App is a javascript quiz 
+                  hello
                 </Card.Text>
-                <Card.Link href="https://github.com/Lynchk07/Javascript-Quiz_fundamentals">Git Repo</Card.Link>
-                <Card.Link href="https://lynchk07.github.io/Javascript-Quiz_fundamentals/">Link</Card.Link>
+                <Card.Link href="#">Git Repo</Card.Link>
+                <Card.Link href="#">Link</Card.Link>
               </Card.Body>
             </Card>
           </Col>
@@ -85,12 +85,12 @@ function Portfolio(props) {
             <Card>
               <Card.Img variant="top" src={NOAPP} />
               <Card.Body>
-                <Card.Title>Note Taker app</Card.Title>
+                <Card.Title>ClassF</Card.Title>
                 <Card.Text>
-                  This is an App used to take and save notes. 
+                  Hello. 
                 </Card.Text>
-                <Card.Link href="https://github.com/Lynchk07/Note-Taker-app---Express.js">Git Repo</Card.Link>
-                <Card.Link href=" https://git.heroku.com/damp-badlands-54051.git">Link</Card.Link>
+                <Card.Link href="#">Git Repo</Card.Link>
+                <Card.Link href="#-m">Link</Card.Link>
               </Card.Body>
             </Card>
           </Col>
