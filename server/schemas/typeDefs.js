@@ -8,6 +8,20 @@ const typeDefs = gql`
         content: [Content]
     }
 
+    type Admin {
+        _id: ID
+        username: String
+        email: String
+        content: [Content]
+    }    
+
+    type Creator {
+        _id: ID
+        username: String
+        email: String
+        content: [Content]
+    }
+
     type Content {
         _id: ID
         title: String
