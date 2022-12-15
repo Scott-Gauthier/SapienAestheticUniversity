@@ -1,40 +1,24 @@
-import React from "react";
-// import ReactPlayer from 'react-player'
-// import ClassCard from "../components/ClassCard";
-
-function ClassPage(){
-    // use hooks to get list of all classes with graphql or routes
-    return(
-        <main>
-            <h2>This is a page for all classes</h2>
-        </main>
-    )
-};
-
-export default ClassPage;
 
 import React, {useState} from "react";
-// import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player';
 
 // import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 //class images 
-import ABC from '../assets/SpacePicsForArticles/space1.png';
-import CAD from '../assets/SpacePicsForArticles/space2.png';
-import BAD from '../assets/SpacePicsForArticles/space3.png';
-import SAD from '../assets/SpacePicsForArticles/space4.png';
-import CHAD from '../assets/SpacePicsForArticles/space5.png';
-import FAB from '../assets/SpacePicsForArticles/space6.png';
-
+import ABC from '../assets/space1.png';
+import CAD from '../assets/space2.png';
+import BAD from '../assets/space3.png';
+import SAD from '../assets/space4.png';
+import CHAD from '../assets/space5.png';
+import FAB from '../assets/space6.png';
 
 function Portfolio(props) {
 
-
   return (
 
-    <Row xs={1} md={3} className="">
+    <Row xs={1} md={3} className="g-4">
 
       {Array.from({ length: 1 }).map((_, idx) => (
         <Col>
@@ -126,4 +110,3 @@ function Portfolio(props) {
 }
 
 export default Portfolio;
-
