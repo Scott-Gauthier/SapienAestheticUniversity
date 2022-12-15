@@ -8,12 +8,14 @@ import InstructorPage from './pages/InstructorPage';
 import StudentPage from './pages/StudentPage';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import HeroCarousel from './components/HeroCarousel';
 
 function App() {
 
   return (
    <Router>
         <AppNavbar/>
+        <HeroCarousel/>
         <Routes>
           <Route 
             path='/' 
