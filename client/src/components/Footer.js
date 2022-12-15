@@ -10,7 +10,7 @@ import {
 } from 'mdb-react-ui-kit';
 
 //added position-right to test footer
-const styles ={
+const styles = {
   footer: {
     textDecoration: 'none',
     background: 'dark',
@@ -19,7 +19,6 @@ const styles ={
     left: '0',
     bottom: '0',
     right: '0',
-    
   }
 }
 

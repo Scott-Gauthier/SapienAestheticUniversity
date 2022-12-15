@@ -78,7 +78,7 @@ const AppNavbar = () => {
             </Tab.Content>
           </Modal.Body>
         </Tab.Container>
-      </Modal>
+      </Modal> 
     </>
   );
 };
