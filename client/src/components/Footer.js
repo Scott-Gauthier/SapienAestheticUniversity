@@ -25,7 +25,7 @@ const styles ={
 
 function Footer() {
   return (
-    <MDBFooter className='text-center' color='white' bgColor='dark' position='fixed'>
+    <MDBFooter className='text-center' color='white' bgColor='dark' position='fixed' top='50px'>
       <MDBContainer className='p-4'>
         {/* <section className='mb-4'>
           <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
