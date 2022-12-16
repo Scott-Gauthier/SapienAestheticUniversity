@@ -1,11 +1,11 @@
-
-import React, {useState} from "react";
+import React from "react";
 // import ReactPlayer from 'react-player';
 
 // import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+
 //class images 
 import ABC from '../assets/SpacePicsForArticles/space1.png';
 import CAD from '../assets/SpacePicsForArticles/space2.png';
@@ -15,9 +15,7 @@ import CHAD from '../assets/SpacePicsForArticles/space5.png';
 import FAB from '../assets/SpacePicsForArticles/space6.png';
 
 function Portfolio(props) {
-
   return (
-
     <Row xs={1} md={3} className="g-4">
 
       {Array.from({ length: 1 }).map((_, idx) => (
