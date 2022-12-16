@@ -8,7 +8,6 @@ export const QUERY_ALL_CONTENT = gql`
       description
       cost
       creator
-      image
     }
   }
 `;
@@ -25,7 +24,6 @@ export const QUERY_USER = gql`
         description
         cost 
         creator
-        image
         }
       }
     }

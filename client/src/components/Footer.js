@@ -92,12 +92,6 @@ function Footer() {
                 <li>
                   <a href='#!' className='text-white'>
 
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a href='#!' className='text-white'>
-
                     Blog
                   </a>
                 </li>
@@ -127,7 +121,7 @@ function Footer() {
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         © 2020 Copyright:
         <a className='text-white' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
+          Sapien University
         </a>
       </div>
     </MDBFooter>
