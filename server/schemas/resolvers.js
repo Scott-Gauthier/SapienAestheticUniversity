@@ -14,10 +14,12 @@ const resolvers = {
             }
             throw new AuthenticationError(`The user is not logged in`);
         },
-        allContent: async(parent, { title }) => {
-            const params = {};
-            if (title) {
-                params.title = title;
+
+        Content: async(parent, { _id }, context) => {
+            if (context.user) {
+                const userData = await User.findOne({ _id: context.user._id })
+                .select(`-_v -password`)
+                return userData;
             }
             return await Content.findById(params).populate('title');
         }
@@ -26,9 +28,10 @@ const resolvers = {
         addUser: async (parent, args) => {
             const user = await User.create(args);
             const token = signToken(user);
+            console.log(token)
             return { user, token };
         },
-        loginUser: async (parent, { email, password }) => {
+        login: async (parent, { email, password }) => {
             const user = await User.findOne( { email });
             if (!user) {
                 throw new AuthenticationError(`Email or password was incorrect, please try again`)
