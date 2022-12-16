@@ -69,7 +69,7 @@ function Portfolio(props) {
             <Card.Body>
               <Card.Title>Lash Lift and Brow Lamination</Card.Title>
               <Card.Text>
-                This was a project created during my coursework for University of Washington Coding bootcamp. This website is a place where you can search for a good book and a brewery. Future development is creating a virtual library and book club. 
+              A lifting technique designed to give you longer-looking lashes without the need for lash extensions. All treatments include a lash tint for your upper lashes, though this may not replace mascara for those clients with petite or fine lashes.  
               </Card.Text>
               <Card.Link href="#">Add to curriculum</Card.Link>
               
