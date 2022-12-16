@@ -80,4 +80,5 @@ module.exports = {
         }
         return res.json(updatedUser);
     },
+
 };
