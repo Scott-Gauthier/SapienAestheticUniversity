@@ -9,7 +9,7 @@ import SAD from '../assets/SpacePicsForArticles/space4.png';
 import CHAD from '../assets/SpacePicsForArticles/space5.png';
 import FAB from '../assets/SpacePicsForArticles/space6.png';
 
-function ClassPage(props) {
+function ClassPage() {
   return (
     <Row xs={1} md={3} className="g-4">
 
@@ -30,7 +30,7 @@ function ClassPage(props) {
           <Card>
             <Card.Img variant="top" src={CAD} />
             <Card.Body>
-              <Card.Title>Scars and stretch marks</Card.Title>
+              <Card.Title>Scars and Stretch Marks</Card.Title>
               <Card.Text>
               Fractional laser is designed to treat surgical and acne scars on any area of the body, including the face. It can be safely used on most skin types. During your consultation, we will determine if you are a good candidate for the procedure based on a variety of factors. 
               </Card.Text>
