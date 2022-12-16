@@ -33,7 +33,6 @@ export const ADD_CONTENT = gql`
         description
         cost
         creator
-        image
       }
     }
   }
@@ -45,12 +44,11 @@ export const SAVE_CONTENT = gql`
       username
       email
       savedContent {
+        contentId
         title
         description
         cost
         creator
-        contentId
-        image
       }
     }
   }
@@ -62,12 +60,11 @@ export const REMOVE_CONTENT = gql`
       username
       email
       savedContent {
+        contentId
         title
         description
         cost 
         creator
-        contentId
-        image
       }
     }
   }
