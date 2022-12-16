@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown, Container, Modal, Tab } from 'react-bootstrap';
 import SignupForm from './SignupForm';
 import LoginForm from './LoginForm';
+import LOGO from '../assets/Logos/Circle-Black-Sapien-Logo.png';
 
 import Auth from '../utils/Auth';
 
@@ -15,7 +16,7 @@ const AppNavbar = () => {
       <Navbar bg='dark' variant='dark' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
-            <h1>Sapien Aesthetic University</h1>
+            <img src={LOGO} alt='logo' style={{ width:"100px", height:"100px", display:"flex" }}/>
           </Navbar.Brand>
           
           <Navbar.Toggle aria-controls='navbar' />
