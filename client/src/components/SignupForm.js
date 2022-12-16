@@ -5,7 +5,6 @@ import Auth from '../utils/Auth';
 import { useMutation } from '@apollo/react-hooks';
 import { ADD_USER } from '../utils/Mutations';
 
-
 const SignupForm = () => {
   const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
   const [validated] = useState(false);
