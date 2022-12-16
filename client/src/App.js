@@ -1,9 +1,8 @@
 import React from 'react';
 import AppNavbar from './components/AppNavbar';
-// import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 import Footer from './components/Footer';
-import ClassPage from './pages/ClassPage';
+import ClassPage from './pages/AllClassesPage';
 import InstructorPage from './pages/InstructorPage';
 import StudentPage from './pages/StudentPage';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
