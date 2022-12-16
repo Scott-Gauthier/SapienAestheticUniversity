@@ -80,7 +80,7 @@ function Portfolio(props) {
           <Card>
             <Card.Img variant="top" src={CHAD} />
             <Card.Body>
-              <Card.Title>Laser Resurfacingp</Card.Title>
+              <Card.Title>Laser Resurfacing</Card.Title>
               <Card.Text>
               Laser resurfacing facial is a revolutionary cosmetic procedure that uses laser beams to improve the look of your skin. This non-surgical treatment works by targeting damaged or wrinkled areas and eliminates dead cells, resulting in a diminished appearance of fine lines, wrinkles, enlarged pores and acne scars. *All new clients must book a consultation prior to making any booking for laser services. 
               </Card.Text>
