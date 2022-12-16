@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 function HeroCarousel() {
   return (
-    <>
+  <div>  
  <Carousel>
       <Carousel.Item interval={1000}>
         <img
@@ -41,7 +41,7 @@ function HeroCarousel() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-  </>
+  </div>
   );
 }
 

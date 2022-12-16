@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Container, Modal, Tab } from 'react-bootstrap';
 import SignupForm from './SignupForm';
 import LoginForm from './LoginForm';
 
@@ -23,14 +23,24 @@ const AppNavbar = () => {
               <Nav className='ml-auto'>
               
                 <Nav.Link as={Link} to='/'>
-                  Search for Classes
+                  Home
                 </Nav.Link>
+
+                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to='/about-us'>
+                  About Us
+                </NavDropdown.Item>
+
+                <NavDropdown.Item as={Link} to='/team'>
+                    Meet the Team
+                  </NavDropdown.Item>
+                </NavDropdown>
 
               {/* if user is logged in */}
               {Auth.loggedIn() ? (
                 <>
                   <Nav.Link as={Link} to='/saved'>
-                    See Your Classes
+                    Saved Classes
                   </Nav.Link>
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>

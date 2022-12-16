@@ -1,10 +1,10 @@
 {
-  "name": "server",
+  "name": "sapien-server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "seed": "node seeds",
+    "seed": "node index.js",
     "start": "node server.js",
     "watch": "nodemon server.js",
     "starte": "node index.js"
