@@ -36,13 +36,8 @@ const LoginForm = () => {
       console.error(err);
       setShowAlert(true);
     }
-
-    setUserFormData({
-      username: '',
-      email: '',
-      password: '',
-    });
-  };
+  }
+// import Auth from '../utils/Auth';
 
   return (
     <>
