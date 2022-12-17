@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom';
 
 function App() {
   return (
-  <ApolloProvider  client ={client}>
+  <ApolloProvider client ={client}>
    <Router>
         <AppNavbar/>
         <HeroCarousel/>
