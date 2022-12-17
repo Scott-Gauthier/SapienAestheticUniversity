@@ -21,6 +21,13 @@ const resolvers = {
                 params.title = title;
             }
             return await Content.findById(params).populate('title');
+        },
+        AllContent: async(parent, args, context) => {
+            // const params = {};
+            // if (title) {
+            //     params.title = title;
+            // }
+            return await Content.find();
         }
     },
     Mutation: {
@@ -42,37 +49,37 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        addContent: async (parent, args , context) => {
-            if (context.content) {
-                const updatedContent = await Content.findOneAndUpdate(
-                    { _id: context.user_id },
-                    { $push: { savedContent: args.input }},
-                    { new: true }
-                )
-                return updatedContent;
-            }
-        },
+        // addContent: async (parent, args , context) => {
+        //     if (context.content) {
+        //         const updatedContent = await Content.findOneAndUpdate(
+        //             { _id: context.user_id },
+        //             { $push: { savedContent: args.input }},
+        //             { new: true }
+        //         )
+        //         return updatedContent;
+        //     }
+        // },
         saveContent: async (parent, args , context) => {
-            if (context.content) {
-                const updatedContent = await Content.findOneAndUpdate(
+            if (context.user) {
+                const updatedUser = await User.findOneAndUpdate(
                     { _id: context.user_id },
-                    { $addToSet: { savedContent: args.input }},
+                    { $push: { studentcontent: args._id }},
                     { new: true }
                 )
-                return updatedContent;
+                return updatedUser;
             }
         },
-        removeContent: async (parent, args, context) => {
-            if (context.content) {
-                const updatedContent = await Content.findOneAndUpdate(
-                    { _id: context.user_id },
-                    { $addToSet: { savedContent: args.contentId }},
-                    { new: true }                    
-                );
-                return updatedContent;
-            }
-            throw new AuthenticationError(`The user must log in`)
-        }
+        // removeContent: async (parent, args, context) => {
+        //     if (context.content) {
+        //         const updatedUser = await User.findOneAndUpdate(
+        //             { _id: context.user_id },
+        //             { $ToSet: { studentcontent: args.content}},
+        //             { new: true }                    
+        //         );
+        //         return updatedContent;
+        //     }
+        //     throw new AuthenticationError(`The user must log in`)
+        // }
     }
 }
 

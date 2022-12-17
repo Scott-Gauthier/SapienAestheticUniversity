@@ -5,21 +5,21 @@ const typeDefs = gql`
         _id: ID
         username: String
         email: String
-        content: [Content]
+        studentcontent: [Content]
     }
 
     type Admin {
         _id: ID
-        username: String
+        adminname: String
         email: String
         content: [Content]
     }    
 
     type Creator {
         _id: ID
-        username: String
+        creatorname: String
         email: String
-        content: [Content]
+        teachercontent: [Content]
     }
 
     type Content {
@@ -27,7 +27,7 @@ const typeDefs = gql`
         title: String
         description: String
         cost: Float
-        # creator: Creator
+        creator: ID
         image: String
         quantity: Int
     }
@@ -38,16 +38,17 @@ const typeDefs = gql`
     }
 
     type Query {
-        Content: Content
-        User: User
+        AllContent: Content
+        GetStudentContent: User
+        GetTeacherContent: Creator
     }
 
     type Mutation {
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
-        addContent(content: String!): Auth
-        saveContent(content: String!): Content
-        removeContent(content: String!): Auth
+        addContent(content: String!): Creator
+        saveContent(_id: ID!): User
+        removeContent(content: String!): User
     }
     `;
 

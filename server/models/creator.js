@@ -12,12 +12,16 @@ const creatorSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-    // match: [/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/, 'Must match an email address!'],
+    match: [/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/, 'Must match an email address!'],
   },
   password: {
     type: String,
     required: true,
-  }
+  },
+  teachercontent: [{
+    type: Schema.Types.ObjectId,
+    ref: 'content',
+  }]
 },
   // {
   //   toJSON: {
