@@ -10,6 +10,9 @@ var contentSchema = new Schema({
     cost: {
         type: Number,
     },
+    image: {
+        type: String,
+    },
     video: {
         type: String,
     },
