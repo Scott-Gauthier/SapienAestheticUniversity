@@ -12,12 +12,13 @@ import AppNavbar from './components/AppNavbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
-import TeamPage from './pages/TeamPage';
-import StudentPage from './pages/StudentPage';
+import Team from './pages/Team';
+import Student from './pages/Student';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
+
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
   const token = localStorage.getItem('id_token');
@@ -51,11 +52,11 @@ function App() {
           />
           <Route 
             path='/team' 
-            element={<TeamPage/>} 
+            element={<Team/>} 
           />
             <Route 
             path='/student' 
-            element={<StudentPage />} 
+            element={<Student />} 
           />
           <Route 
             path='*'

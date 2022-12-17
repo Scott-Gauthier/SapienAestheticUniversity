@@ -12,7 +12,7 @@ import DAB from '../assets/SpacePicsForArticles/space7.png';
 import LAD from '../assets/SpacePicsForArticles/space8.png';
 import MAD from '../assets/SpacePicsForArticles/space9.png';
 
-function StudentPage() {
+function Student() {
   return (
     <div>
 
@@ -147,4 +147,4 @@ function StudentPage() {
   );
 }
 
-export default StudentPage;
+export default Student;
