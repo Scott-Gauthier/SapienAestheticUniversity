@@ -14,12 +14,11 @@ import Footer from './components/Footer';
 import ClassPage from './pages/ClassPage';
 import TeamPage from './pages/TeamPage';
 import StudentPage from './pages/StudentPage';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 function App() {
   return (
-  <ApolloProvider  client ={client}>
+  <ApolloProvider client ={client}>
    <Router>
         <AppNavbar/>
         <HeroCarousel/>
