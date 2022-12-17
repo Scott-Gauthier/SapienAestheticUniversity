@@ -10,7 +10,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import AppNavbar from './components/AppNavbar';
 import Footer from './components/Footer';
-import ClassPage from './pages/ClassPage';
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
 import TeamPage from './pages/TeamPage';
 import StudentPage from './pages/StudentPage';
 
@@ -42,7 +43,11 @@ function App() {
         <Routes>
           <Route 
             path='/' 
-            element={<ClassPage/>} 
+            element={<Home/>} 
+          />
+          <Route 
+            path='/about-us' 
+            element={<AboutUs/>} 
           />
           <Route 
             path='/team' 

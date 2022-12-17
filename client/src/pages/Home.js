@@ -2,9 +2,6 @@ import React from "react";
 import { Card, Col, Row } from 'react-bootstrap';
 import HeroCarousel from '../components/HeroCarousel';
 
-//class images 
-import ABC from '';
-
 
 function ClassPage() {
   return (
@@ -17,7 +14,7 @@ function ClassPage() {
       {Array.from({ length: 1 }).map((_, idx) => (
         <Col>
           <Card>
-            <Card.Img variant="top" src={ABC} />
+            <Card.Img variant="top" src='' />
             <Card.Body>
               <Card.Title></Card.Title>
               <Card.Text>
@@ -27,18 +24,6 @@ function ClassPage() {
           </Card>
         </Col>
       ))}
-        
-        <Col>
-          <Card>
-            <Card.Img variant="top" src={DAB} />
-            <Card.Body>
-              <Card.Title></Card.Title>
-              <Card.Text>
-
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
 
     </Row>
     </div>
