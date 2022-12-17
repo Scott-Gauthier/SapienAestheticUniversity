@@ -11,8 +11,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AppNavbar from './components/AppNavbar';
 import HeroCarousel from './components/HeroCarousel';
 import Footer from './components/Footer';
-import ClassPage from './pages/AllClassesPage';
-import InstructorPage from './pages/InstructorPage';
+import ClassPage from './pages/ClassPage';
+import TeamPage from './pages/TeamPage';
 import StudentPage from './pages/StudentPage';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -29,8 +29,8 @@ function App() {
             element={<ClassPage/>} 
           />
           <Route 
-            path='/instructor' 
-            element={<InstructorPage/>} 
+            path='/team' 
+            element={<TeamPage/>} 
           />
             <Route 
             path='/student' 
@@ -38,7 +38,7 @@ function App() {
           />
           <Route 
             path='*'
-            element={<h1 className='display-2'>Wrong page!</h1>}
+            element={<h1 className='display-2'>Wrong page! Try Again!</h1>}
           />
         </Routes>
         <Footer/>
