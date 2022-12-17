@@ -3,7 +3,7 @@ import { Card, Col, Row } from 'react-bootstrap';
 import HeroCarousel from '../components/HeroCarousel';
 
 //class images 
-import ABC from '';
+import SaveButton from "../components/SaveButton/SaveButton";
 
 
 function ClassPage() {
@@ -13,11 +13,11 @@ function ClassPage() {
    <HeroCarousel/>
    
     <Row xs={1} md={3} className="g-4 py-3">
-
+{/* 
       {Array.from({ length: 1 }).map((_, idx) => (
         <Col>
           <Card>
-            <Card.Img variant="top" src={ABC} />
+            <Card.Img variant="top"/>
             <Card.Body>
               <Card.Title></Card.Title>
               <Card.Text>
@@ -26,16 +26,17 @@ function ClassPage() {
             </Card.Body>
           </Card>
         </Col>
-      ))}
+      ))} */}
         
         <Col>
           <Card>
-            <Card.Img variant="top" src={DAB} />
+            <Card.Img variant="top"/>
             <Card.Body>
-              <Card.Title></Card.Title>
+              <Card.Title>test</Card.Title>
               <Card.Text>
-
+                  Testing the body works
               </Card.Text>
+              <SaveButton />
             </Card.Body>
           </Card>
         </Col>
