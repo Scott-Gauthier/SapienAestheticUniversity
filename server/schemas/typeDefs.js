@@ -29,7 +29,6 @@ const typeDefs = gql`
         cost: Float
         creator: ID
         image: String
-        quantity: Int
     }
 
     type Auth {
