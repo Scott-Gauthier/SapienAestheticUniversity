@@ -54,13 +54,13 @@
 body {
   margin: 0;
   overflow-y: overlay;
-  font-family: "Poppins Regular";
+  font-family: "Bradley Hand", 'Courier New', Courier, monospace, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -87,7 +87,6 @@ body ::-webkit-scrollbar-thumb {
   width: 160px;
   cursor: pointer;
   transition: 0.2s;
-  font-family: "Poppins SemiBold";
 }
 
 .btn:active {
@@ -114,7 +113,6 @@ body ::-webkit-scrollbar-thumb {
 
 .highlighted-btn {
   color: var(--white);
-
   font-size: 12px;
   background-color: #ff5823;
 }

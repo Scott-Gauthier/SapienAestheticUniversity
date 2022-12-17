@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown, Container, Modal, Tab } from 'react-bootstrap';
 import SignupForm from './SignupForm';
 import LoginForm from './LoginForm';
-import LOGO from '../assets/Logos/Circle-Black-Sapien-Logo.png';
+import LOGO from '../assets/Logos/Eclipse-Logo-Sapien.jpg';
 
 import Auth from '../utils/Auth';
 
@@ -16,26 +16,12 @@ const AppNavbar = () => {
       <Navbar bg='dark' variant='dark' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
-            <img src={LOGO} alt='logo' style={{ width:"100px", height:"100px", display:"flex" }}/>
+            <img src={LOGO} alt='logo' style={{ width:"80px", height:"80px" }}/> Sapien Aesthetic University 
           </Navbar.Brand>
           
           <Navbar.Toggle aria-controls='navbar' />
             <Navbar.Collapse id='navbar'>
-              <Nav className='ml-auto'>
-              
-                <Nav.Link as={Link} to='/'>
-                  Home
-                </Nav.Link>
-
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to='/about-us'>
-                  About Us
-                </NavDropdown.Item>
-
-                <NavDropdown.Item as={Link} to='/team'>
-                    Meet the Team
-                  </NavDropdown.Item>
-                </NavDropdown>
+              <Nav className='ml-auto text-light fs-5'>
 
               {/* if user is logged in */}
               {Auth.loggedIn() ? (
@@ -43,10 +29,23 @@ const AppNavbar = () => {
                   <Nav.Link as={Link} to='/saved'>
                     Saved Classes
                   </Nav.Link>
+                  
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>
               ) : (
-                <Nav.Link onClick={() => setShowModal(true)}>Login or Sign Up</Nav.Link>
+                <>
+                <Nav.Link as={Link} to='/'> Home </Nav.Link> 
+
+                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to='/about-us'>
+                  About Us
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to='/team'>
+                  Meet the Team
+                  </NavDropdown.Item>
+                </NavDropdown>
+
+                <Nav.Link onClick={() => setShowModal(true)}>Login or Sign Up</Nav.Link> </>
               )} 
 
             </Nav>
