@@ -22,6 +22,7 @@ const resolvers = {
             }
             return await Content.findById(params).populate('title');
         },
+        
         AllContent: async(parent, args, context) => {
             // const params = {};
             // if (title) {
@@ -30,6 +31,7 @@ const resolvers = {
             return await Content.find();
         }
     },
+
     Mutation: {
         addUser: async (parent, args) => {
             const user = await User.create(args);
@@ -49,37 +51,40 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        // addContent: async (parent, args , context) => {
-        //     if (context.content) {
-        //         const updatedContent = await Content.findOneAndUpdate(
-        //             { _id: context.user_id },
-        //             { $push: { savedContent: args.input }},
-        //             { new: true }
-        //         )
-        //         return updatedContent;
-        //     }
-        // },
-        saveContent: async (parent, args , context) => {
-            if (context.user) {
-                const updatedUser = await User.findOneAndUpdate(
-                    { _id: context.user_id },
-                    { $push: { studentcontent: args._id }},
-                    { new: true }
-                )
-                return updatedUser;
-            }
-        },
-        // removeContent: async (parent, args, context) => {
-        //     if (context.content) {
-        //         const updatedUser = await User.findOneAndUpdate(
-        //             { _id: context.user_id },
-        //             { $ToSet: { studentcontent: args.content}},
-        //             { new: true }                    
-        //         );
-        //         return updatedContent;
-        //     }
-        //     throw new AuthenticationError(`The user must log in`)
-        // }
+        
+    // addContent: async (parent, args , context) => {
+    //     if (context.content) {
+    //         const updatedContent = await Content.findOneAndUpdate(
+    //             { _id: context.user_id },
+    //             { $push: { savedContent: args.input }},
+    //             { new: true }
+    //         )
+    //         return updatedContent;
+    //     }
+    },
+        
+    saveContent: async (parent, args , context) => {
+        if (context.user) {
+            const updatedUser = await User.findOneAndUpdate(
+                { _id: context.user_id },
+                { $push: { studentcontent: args._id }},
+                { new: true }
+            )
+            return updatedUser;
+        }
+    },
+        
+    // removeContent: async (parent, args, context) => {
+    //     if (context.content) {
+    //         const updatedUser = await User.findOneAndUpdate(
+    //             { _id: context.user_id },
+    //             { $ToSet: { studentcontent: args.content}},
+    //             { new: true }                    
+    //         );
+    //         return updatedContent;
+    //     }
+    //     throw new AuthenticationError(`The user must log in`)
+    //     }
     }
 }
 

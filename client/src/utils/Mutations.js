@@ -27,11 +27,11 @@ export const ADD_USER = gql`
 // export const ADD_CONTENT = gql`
 //   mutation addContent($content: [ID]!) {
 //     addContent(content: $content) {
-//       content {
-//         _id
+//        content {
+//          _id
 //         title
-//         description
-//         cost
+//          description
+//          cost
 //         creator
 //       }
 //     }
@@ -49,17 +49,17 @@ export const SAVE_CONTENT = gql`
 `;
 
 // export const REMOVE_CONTENT = gql`
-//   mutation removeContent($contentId: String!) {
-//     removeContent(contentId: $contentId) {
-//       username
-//       email
-//       savedContent {
-//         contentId
-//         title
+//    mutation removeContent($contentId: String!) {
+//      removeContent(contentId: $contentId) {
+//        username
+//        email
+//        savedContent {
+//          contentId
+//          title
 //         description
-//         cost 
-//         creator
-//       }
-//     }
-//   }
+//          cost 
+//          creator
+//        }
+//      }
+//    }
 // `;

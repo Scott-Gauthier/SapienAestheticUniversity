@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
 function HeroCarousel() {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
   return (
   <div>  
-    <Carousel>
-      <Carousel.Item interval={1000}>
+    <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
         <img
           className="d-block w-100"
           src="https://images.unsplash.com/photo-1504221507732-5246c045949b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -17,7 +23,7 @@ function HeroCarousel() {
         </Carousel.Caption>
       </Carousel.Item>
 
-      <Carousel.Item interval={500}>
+      <Carousel.Item>
         <img
           className="d-block w-100"
           src="https://images.unsplash.com/photo-1507919981044-3b672b208db9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
