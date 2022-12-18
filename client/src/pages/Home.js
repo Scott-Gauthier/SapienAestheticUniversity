@@ -1,8 +1,6 @@
 import React from "react";
 import { Card, Col, Row } from 'react-bootstrap';
 import HeroCarousel from '../components/HeroCarousel';
-
-//class images 
 import SaveButton from "../components/SaveButton/SaveButton";
 
 
