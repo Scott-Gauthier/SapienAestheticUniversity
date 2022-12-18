@@ -96,9 +96,10 @@ const SignupForm = () => {
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
 
-      <Form.Group className="mb-3" controlId="signUpForInstructor">
+      <Form.Group className="mb-3 py-2" controlId="signUpForInstructor">
           <Form.Label>Instructor?</Form.Label>
           <Form.Check
+            className='p-4 py-2'
             type='checkbox'
             name='creator'
             onChange = {handleInputChange}
