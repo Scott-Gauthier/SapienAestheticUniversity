@@ -14,6 +14,7 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Team from './pages/Team';
 import Student from './pages/Student';
+import SavedClasses from './pages/SavedClasses';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -57,6 +58,10 @@ function App() {
             <Route 
             path='/student' 
             element={<Student />} 
+          />
+           <Route 
+            path='/saved' 
+            element={<SavedClasses/>} 
           />
           <Route 
             path='*'
