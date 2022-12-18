@@ -42,24 +42,28 @@ function ClassPage() {
   return (
     <div>
        <HeroCarousel/>
+
       {data.AllContent.map((element) => {
         console.log(element)
-        return (
-        <Row xs={1} md={3}className="g-4 py-3">
+        
+      return (
+        <Row xs={1} md={3} className="g-4 py-3">
+
           <Col>
             <Card key={element.id}>
               <Card.Img variant="top" src={require("../assets/SpacePicsForArticles/space"+element.image+".png")}/>
               <Card.Body>
                 <Card.Title>{element.title}</Card.Title>
                 <Card.Text>
-                  {element.description}   
-                  
+                
+                  {element.description}
+
                 </Card.Text>
                 <SaveButton onClick={() => handleSaveContent(element.id)}/>
               </Card.Body>
             </Card>
           </Col>
-        </Row>
+        </Row> 
         )}
       )}
     </div>
