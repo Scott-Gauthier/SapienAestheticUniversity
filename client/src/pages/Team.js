@@ -1,5 +1,4 @@
-import React, {useState} from "react";
-import ClassCard from "../components/ClassCard";
+import React from "react";
 
 function InstructorPage(){
     return(

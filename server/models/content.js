@@ -8,7 +8,7 @@ var contentSchema = new Schema({
         type: String,
     },
     cost: {
-        type: Number,
+        type: String,
     },
     image: {
         type: String,

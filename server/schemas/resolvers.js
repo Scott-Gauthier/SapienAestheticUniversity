@@ -1,5 +1,4 @@
-const { User } = require(`../models`);
-const { Content } = require(`../models`);
+const { User, Content } = require(`../models`);
 const { signToken } = require(`../utils/auth`);
 const { AuthenticationError } = require(`apollo-server-express`);
 const stripe = require('stripe'); 
@@ -7,29 +6,25 @@ const stripe = require('stripe');
 
 const resolvers = {
     Query: {
-        User: async(parent, args, context) => {
-            if (context.user) {
-                const userData = await User.findOne({ _id: context.user._id })
-                .select(`-_v -password`)
-                return userData;
-            }
-            throw new AuthenticationError(`The user is not logged in`);
-        },
+        // User: async(parent, args, context) => {
+        //     if (context.user) {
+        //         const userData = await User.findOne({ _id: context.user._id })
+        //         .select(`-_v -password`)
+        //         return userData;
+        //     }
+        //     throw new AuthenticationError(`The user is not logged in`);
+        // },
 
-        Content: async(parent, { title }) => {
-            const params = {};
-            if (title) {
-                params.title = title;
-            }
-            return await Content.findById(params).populate('title');
-        },
+        // Content: async(parent, { title }) => {
+        //     const params = {};
+        //     if (title) {
+        //         params.title = title;
+        //     }
+        //     return await Content.findById(params).populate('title');
+        // },
         
-        AllContent: async(parent, args, context) => {
-            // const params = {};
-            // if (title) {
-            //     params.title = title;
-            // }
-            return await Content.find();
+        AllContent: async () => {
+            return Content.find();
         }
     },
 
@@ -64,16 +59,16 @@ const resolvers = {
     //     }
     },
         
-    saveContent: async (parent, args , context) => {
-        if (context.user) {
-            const updatedUser = await User.findOneAndUpdate(
-                { _id: context.user_id },
-                { $push: { studentcontent: args._id }},
-                { new: true }
-            )
-            return updatedUser;
-        }
-    },
+    // saveContent: async (parent, args , context) => {
+    //     if (context.user) {
+    //         const updatedUser = await User.findOneAndUpdate(
+    //             { _id: context.user_id },
+    //             { $push: { studentcontent: args._id }},
+    //             { new: true }
+    //         )
+    //         return updatedUser;
+    //     }
+    // },
         
     // removeContent: async (parent, args, context) => {
     //     if (context.content) {
