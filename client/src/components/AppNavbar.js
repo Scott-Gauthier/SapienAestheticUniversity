@@ -21,7 +21,7 @@ const AppNavbar = () => {
           
           <Navbar.Toggle aria-controls='navbar' />
             <Navbar.Collapse id='navbar'>
-              <Nav className='ml-auto text-light fs-5'>
+              <Nav className='ml-auto text-light fs-6'>
 
               {/* if user is logged in */}
               {Auth.loggedIn() ? (
