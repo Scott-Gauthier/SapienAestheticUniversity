@@ -7,7 +7,7 @@ import { ADD_USER } from '../utils/Mutations';
 import Auth from '../utils/Auth';
 
 const SignupForm = () => {
-  const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
+  const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '', creator: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [createUser] = useMutation(ADD_USER);
@@ -42,6 +42,7 @@ const SignupForm = () => {
       username: '',
       email: '',
       password: '',
+      creator: '',
     });
   };
 
@@ -92,6 +93,8 @@ const SignupForm = () => {
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
+
+
 
         <Button
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
