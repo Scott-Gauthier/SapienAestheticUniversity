@@ -14,12 +14,13 @@ export const QUERY_ALL_CONTENT = gql`
   }
 `;
 
-// export const QUERY_USER = gql`
-// query getUser {
-//   AllUser {
-//       _id
-//       username
-//       email
-//       }
-//     }
-// `;
+export const GET_USER = gql`
+query getUser {
+  getUser {
+      _id
+      username
+      email
+      studentcontent
+      }
+    }
+`;
