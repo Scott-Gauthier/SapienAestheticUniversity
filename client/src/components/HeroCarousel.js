@@ -1,32 +1,40 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
 function HeroCarousel() {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
   return (
   <div>  
- <Carousel>
-      <Carousel.Item interval={1000}>
+    <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
         <img
           className="d-block w-100"
           src="https://images.unsplash.com/photo-1504221507732-5246c045949b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Become a skin care expert.</h3>
-          <p>We offer multiple classes on various topics.</p>
+          <h2>Become a skin care expert.</h2>
+          <h4>We offer multiple classes on various topics.</h4>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={500}>
+
+      <Carousel.Item>
         <img
           className="d-block w-100"
           src="https://images.unsplash.com/photo-1507919981044-3b672b208db9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3>Explore our list of classes.</h3>
-          <p>You won't regret it.</p>
+          <h2>Explore our list of classes.</h2>
+          <h4>You won't regret it.</h4>
         </Carousel.Caption>
       </Carousel.Item>
+      
       <Carousel.Item>
         <img
           className="d-block w-100"
@@ -34,10 +42,10 @@ function HeroCarousel() {
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h3>Make an account to get started.</h3>
-          <p>
+          <h2>Make an account to get started.</h2>
+          <h4>
             Don't miss out on this exciting opportunity. 
-          </p>
+          </h4>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

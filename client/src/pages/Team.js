@@ -1,10 +1,16 @@
 import React, {useState} from "react";
 import ClassCard from "../components/ClassCard";
+
 function InstructorPage(){
-    // get classes by instructor
     return(
-        <main>
-            <h2>This is a page for specific instructors classes.</h2>
+        <main className="px-3 py-3">
+
+            <h2>Meet Stephanie</h2><p>Bio:</p>
+
+            <h2>Meet Jess</h2><p>Bio:</p>
+
+            <h2>Meet Kristin</h2><p>Bio:</p>
+
         </main>
     )
 };

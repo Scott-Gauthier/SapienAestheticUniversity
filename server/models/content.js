@@ -10,6 +10,9 @@ var contentSchema = new Schema({
     cost: {
         type: Number,
     },
+    image: {
+        type: String,
+    },
     video: {
         type: String,
     },
@@ -18,18 +21,7 @@ var contentSchema = new Schema({
         ref: 'creator',
     }],
 },
-    // {
-    //   toJSON: {
-    //     virtuals: true,
-    //   },
-    //   id: false,
-    // }
 );
-
-// // Create a virtual property `friendCount` that gets the amount of friends per post
-// userSchema.virtual('friendCount').get(function () {
-//   return this.friends.length;
-// });
 
 const Content = model('content', contentSchema);
 

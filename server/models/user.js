@@ -5,7 +5,7 @@ var userSchema = new Schema({
     username: { 
         type: String, 
         required: true, 
-        index: { unique: true } 
+        unique: true 
     },
     email: {
       type: String,
@@ -17,17 +17,13 @@ var userSchema = new Schema({
         type: String, 
         required: true 
     },
-    content: [{
+    studentcontent: [{
       type: Schema.Types.ObjectId,
       ref: 'content',
   }],
+    
 },
-// {
-//   toJSON: {
-//     virtuals: true,
-//   },
-//   id: false,
-// }
+
 );
 
 userSchema.pre('save', async function (next) {
@@ -42,11 +38,6 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 }
-
-// // Create a virtual property `friendCount` that gets the amount of friends per post
-// userSchema.virtual('friendCount').get(function () {
-//   return this.friends.length;
-// });
 
 const User = model('user', userSchema);
 

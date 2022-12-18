@@ -9,36 +9,58 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import AppNavbar from './components/AppNavbar';
-import HeroCarousel from './components/HeroCarousel';
 import Footer from './components/Footer';
-import ClassPage from './pages/ClassPage';
-import TeamPage from './pages/TeamPage';
-import StudentPage from './pages/StudentPage';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import Team from './pages/Team';
+import Student from './pages/Student';
+
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token = localStorage.getItem('id_token');
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+})
 
 function App() {
   return (
-  <ApolloProvider  client ={client}>
+  <ApolloProvider client ={client}>
    <Router>
         <AppNavbar/>
-        <HeroCarousel/>
         <Routes>
           <Route 
             path='/' 
-            element={<ClassPage/>} 
+            element={<Home/>} 
+          />
+          <Route 
+            path='/about-us' 
+            element={<AboutUs/>} 
           />
           <Route 
             path='/team' 
-            element={<TeamPage/>} 
+            element={<Team/>} 
           />
             <Route 
             path='/student' 
-            element={<StudentPage />} 
+            element={<Student />} 
           />
           <Route 
             path='*'
-            element={<h1 className='display-2'>Wrong page! Try Again!</h1>}
+            element={<h1 className='display-2'>Oops Under Construction! Coming Soon!</h1>}
           />
         </Routes>
         <Footer/>
