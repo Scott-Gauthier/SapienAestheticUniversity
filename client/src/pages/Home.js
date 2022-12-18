@@ -14,9 +14,10 @@ function ClassPage() {
   return (
     <div>
        <HeroCarousel/>
+
       {data.AllContent.map((element) => {
         console.log(element)
-        return (
+      return (
         <Row xs={1} md={3} className="g-4 py-3">
           <Col>
             <Card>
@@ -25,13 +26,12 @@ function ClassPage() {
                 <Card.Title>{element.title}</Card.Title>
                 <Card.Text>
                   {element.description}
-                  
                 </Card.Text>
                 <div id={element.id}><SaveButton /></div>
               </Card.Body>
             </Card>
           </Col>
-        </Row>
+        </Row> 
         )}
       )}
     </div>

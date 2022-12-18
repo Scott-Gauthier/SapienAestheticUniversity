@@ -54,7 +54,7 @@
 body {
   margin: 0;
   overflow-y: overlay;
-  font-family: "Bradley Hand", 'Courier New', Courier, monospace, sans-serif;
+  font-family: 'Helvetica', 'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
