@@ -12,7 +12,6 @@ const seedContent = async () => {
         cost: `1.99`,
         image: `../assets/SpacePicsForArticles/space1.png`,
         video: ``,
-        creator: ``
       },
       {
         title: `Collagen 101`,
@@ -20,7 +19,6 @@ const seedContent = async () => {
         cost: `2.99`,
         image: `../assets/SpacePicsForArticles/space2.png`,
         video: ``,
-        creator: ``
       },
       {
         title: `The Many Benefits of Facial Message`,
@@ -28,7 +26,6 @@ const seedContent = async () => {
         cost: `3.99`,
         image: `../assets/SpacePicsForArticles/space3.png`,
         video: ``,
-        creator: ``
       },
       {
         title: `Why You Should Wear SPF Everyday`,
@@ -36,7 +33,6 @@ const seedContent = async () => {
         cost: `4.99`,
         image: `../assets/SpacePicsForArticles/space4.png`,
         video: ``,
-        creator: ``
       },
       {
         title: `Hyperpigmentation 101`,
@@ -44,7 +40,6 @@ const seedContent = async () => {
         cost: `5.99`,
         image: `../assets/SpacePicsForArticles/space5.png`,
         video: ``,
-        creator: ``
       },
       {
         title: `Natural vs. Medical Grade Products`,
@@ -54,7 +49,6 @@ const seedContent = async () => {
         cost: `6.99`,
         image: `../assets/SpacePicsForArticles/space6.png`,
         video: ``,
-        creator: ``
       },
       {
         title: `LED Light Therapy`,
@@ -62,7 +56,6 @@ const seedContent = async () => {
         cost: `7.99`,
         image: `../assets/SpacePicsForArticles/space7.png`,
         video: ``,
-        creator: ``
       },
       {
         title: `Skin Anatomy 101`,
@@ -70,7 +63,6 @@ const seedContent = async () => {
         cost: `8.99`,
         image: `../assets/SpacePicsForArticles/space8.png`,
         video: ``,
-        creator: ``
       },
       {
         title: `Acne 101`,
@@ -80,7 +72,6 @@ const seedContent = async () => {
         cost: `9.99`,
         image: `../assets/SpacePicsForArticles/space9.png`,
         video: ``,
-        creator: ``
       },
     ],
   ).then((err) =>

@@ -1,5 +1,5 @@
 {
-    "name": "Sapien-Asethic-University-App",
+    "name": "sapien-asethic-university-app",
     "version": "1.0.0",
     "description": "",
     "main": "server/server.js",

@@ -7,7 +7,7 @@ import { LOGIN_USER } from '../utils/Mutations';
 import Auth from '../utils/Auth';
 
 const LoginForm = () => {
-  const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+  const [userFormData, setUserFormData] = useState({ email: '', password: '', creator: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [loginUser] = useMutation(LOGIN_USER);
@@ -41,6 +41,7 @@ const LoginForm = () => {
       username: '',
       email: '',
       password: '',
+      creator: '',
     });
   };
 
@@ -76,6 +77,17 @@ const LoginForm = () => {
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label htmlFor='creator'>Instructor?</Form.Label>
+          <Form.Control
+            type='checkbox'
+            name='creator'
+            onChange={handleInputChange}
+            value={userFormData.creator}
+          />
+        </Form.Group>
+
         <Button
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'

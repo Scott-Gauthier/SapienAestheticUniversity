@@ -26,9 +26,10 @@ const typeDefs = gql`
         _id: ID
         title: String
         description: String
-        cost: Float
-        creator: ID
+        cost: String
         image: String
+        video: String
+        # creator: [Creator]
     }
 
     type Auth {
@@ -37,9 +38,10 @@ const typeDefs = gql`
     }
 
     type Query {
-        AllContent: Content
-        GetStudentContent: User
-        GetTeacherContent: Creator
+        AllContent: [Content]
+        # AllUser: User
+        # GetStudentContent: User
+        # GetTeacherContent: Creator
     }
 
     type Mutation {
