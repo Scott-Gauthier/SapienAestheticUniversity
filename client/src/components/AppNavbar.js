@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, NavDropdown, Container, Modal, Tab } from 'react-bootstrap';
+import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
 import SignupForm from './SignupForm';
 import LoginForm from './LoginForm';
 import LOGO from '../assets/Logos/Eclipse-Logo-Sapien.jpg';
@@ -36,16 +36,16 @@ const AppNavbar = () => {
                 <>
                 <Nav.Link as={Link} to='/'> Home </Nav.Link> 
 
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to='/about-us'>
+                <Nav.Link as={Link} to='/about-us'>
                   About Us
-                </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to='/team'>
-                  Meet the Team
-                  </NavDropdown.Item>
-                </NavDropdown>
+                </Nav.Link>
 
-                <Nav.Link onClick={() => setShowModal(true)}>Login or Sign Up</Nav.Link> </>
+                <Nav.Link as={Link} to='/team'>
+                  Meet the Instructors 
+                </Nav.Link>
+  
+                <Nav.Link onClick={() => setShowModal(true)}>Login or Sign Up</Nav.Link> 
+                </>
               )} 
 
             </Nav>
