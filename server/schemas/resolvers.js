@@ -1,5 +1,4 @@
-const { User } = require(`../models`);
-const { Content } = require(`../models`);
+const { User, Content } = require(`../models`);
 const { signToken } = require(`../utils/auth`);
 const { AuthenticationError } = require(`apollo-server-express`);
 const stripe = require('stripe'); 
@@ -24,10 +23,6 @@ const resolvers = {
         },
         
         AllContent: async(parent, args, context) => {
-            // const params = {};
-            // if (title) {
-            //     params.title = title;
-            // }
             return await Content.find();
         }
     },
@@ -86,6 +81,5 @@ const resolvers = {
     //     throw new AuthenticationError(`The user must log in`)
     //     }
     }
-}
 
 module.exports = resolvers;

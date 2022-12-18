@@ -26,9 +26,11 @@ const typeDefs = gql`
         _id: ID
         title: String
         description: String
-        cost: Float
-        creator: ID
+        cost: Number
         image: String
+        video: String
+        creator: ID
+
     }
 
     type Auth {

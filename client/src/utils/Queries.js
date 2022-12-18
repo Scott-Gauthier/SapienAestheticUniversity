@@ -1,30 +1,26 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_ALL_CONTENT = gql`
-  {
-    content {
+ query getAllContent {
+    AllContent {
       _id
       title
       description
       cost
+      image
+      video
       creator
     }
   }
 `;
 
 export const QUERY_USER = gql`
-  {
-    user {
+query getUser {
+    User {
       _id
       username
       email
-      savedContent { 
-        contentId
-        title
-        description
-        cost 
-        creator
-        }
+      studentcontent
       }
     }
 `;
