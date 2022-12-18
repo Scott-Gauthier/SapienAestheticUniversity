@@ -5,40 +5,47 @@ import { QUERY_ALL_CONTENT } from '../utils/Queries';
 // import HeroCarousel from '../components/HeroCarousel';
 import SaveButton from "../components/SaveButton/SaveButton";
 
-function ClassPage() {
-  const [content] = useQuery(QUERY_ALL_CONTENT);
+function ClassPage({ onContentSelected }) {
+  const { loading, error, data } = useQuery(QUERY_ALL_CONTENT);
+
+  if (loading) return 'Loading...';
+  if (error) return `Error! ${error.message}`;
 
   return (
-    <div>
-      <Row xs={1} md={3} className="g-4 py-3">
-        <Col>
-          <Card>
-            <Card.Img variant="top" />
-            <Card.Body>
-              <Card.Title>test 1</Card.Title>
-              <Card.Text>
-                Test body
-              </Card.Text>
-              <SaveButton />
-            </Card.Body>
-          </Card>
-        </Col>
+    <select name='content' onChange={onContentSelected}>
+      {data.AllContent.map((element) => (
+        <div>
+          <Row xs={1} md={3} className="g-4 py-3">
+            <Col>
+              <Card>
+                <Card.Img variant="top" />
+                <Card.Body>
+                  <Card.Title>{element.title}</Card.Title>
+                  <Card.Text>
+                    {element.description}
+                  </Card.Text>
+                  <SaveButton />
+                </Card.Body>
+              </Card>
+            </Col>
 
-        <Col>
-          <Card>
-            <Card.Img variant="top" />
-            <Card.Body>
-              <Card.Title>test</Card.Title>
-              <Card.Text>
-                Testing the body works
-              </Card.Text>
-              <SaveButton />
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </div>
-  )
+            <Col>
+              <Card>
+                <Card.Img variant="top" />
+                <Card.Body>
+                  <Card.Title>test</Card.Title>
+                  <Card.Text>
+                    Testing the body works
+                  </Card.Text>
+                  <SaveButton />
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </div>
+      ))}
+    </select>
+  );
 }
 
 export default ClassPage;
