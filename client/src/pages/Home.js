@@ -17,17 +17,17 @@ function ClassPage() {
       {data.AllContent.map((element) => {
         console.log(element)
         return (
-        <Row xs={1} md={3} className="g-4 py-3">
+        <Row xs={1} md={3}className="g-4 py-3">
           <Col>
-            <Card>
-              <Card.Img variant="top" src={element.image} />
+            <Card key={element.id}>
+              <Card.Img variant="top" src={require("../assets/SpacePicsForArticles/space"+element.image+".png")}/>
               <Card.Body>
                 <Card.Title>{element.title}</Card.Title>
                 <Card.Text>
-                  {element.description}
+                  {element.description}   
                   
                 </Card.Text>
-                <div id={element.id}><SaveButton /></div>
+              <SaveButton/>
               </Card.Body>
             </Card>
           </Col>
