@@ -6,14 +6,14 @@ const stripe = require('stripe');
 
 const resolvers = {
     Query: {
-        // User: async(parent, args, context) => {
-        //     if (context.user) {
-        //         const userData = await User.findOne({ _id: context.user._id })
-        //         .select(`-_v -password`)
-        //         return userData;
-        //     }
-        //     throw new AuthenticationError(`The user is not logged in`);
-        // },
+        getUser: async(parent, args, context) => {
+            if (context.user) {
+                const userData = await User.findOne({ _id: context.user._id })
+                .select(`-_v -password`)
+                return userData;
+            }
+            throw new AuthenticationError(`The user is not logged in`);
+        },
 
         // Content: async(parent, { title }) => {
         //     const params = {};

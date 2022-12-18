@@ -40,7 +40,7 @@ const typeDefs = gql`
     type Query {
         AllContent: [Content]
         # AllUser: User
-        # GetStudentContent: User
+        getUser: User
         # GetTeacherContent: Creator
     }
 
