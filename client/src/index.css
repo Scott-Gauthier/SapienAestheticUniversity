@@ -52,7 +52,6 @@
 }
 
 body {
-  margin: 0;
   overflow-y: overlay;
   font-family: 'Helvetica', 'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
