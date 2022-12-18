@@ -26,7 +26,7 @@ const typeDefs = gql`
         _id: ID
         title: String
         description: String
-        cost: Number
+        cost: String
         image: String
         video: String
         creator: ID
@@ -39,9 +39,10 @@ const typeDefs = gql`
     }
 
     type Query {
-        AllContent: Content
-        GetStudentContent: User
-        GetTeacherContent: Creator
+        AllContent: [Content]
+        # AllUser: User
+        # GetStudentContent: User
+        # GetTeacherContent: Creator
     }
 
     type Mutation {
