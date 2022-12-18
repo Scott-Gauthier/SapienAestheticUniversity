@@ -29,8 +29,7 @@ const typeDefs = gql`
         cost: String
         image: String
         video: String
-        creator: ID
-
+        # creator: [Creator]
     }
 
     type Auth {
