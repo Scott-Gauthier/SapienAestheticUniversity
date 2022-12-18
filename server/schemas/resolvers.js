@@ -3,6 +3,7 @@ const { signToken } = require(`../utils/auth`);
 const { AuthenticationError } = require(`apollo-server-express`);
 const stripe = require('stripe'); 
 
+
 const resolvers = {
     Query: {
         User: async(parent, args, context) => {
@@ -81,5 +82,6 @@ const resolvers = {
     //     throw new AuthenticationError(`The user must log in`)
     //     }
     }
+
 
 module.exports = resolvers;
