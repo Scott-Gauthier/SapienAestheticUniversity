@@ -2,7 +2,7 @@
 
 ## Descroption 
 
-We made this website because we wanted intrduce the Sapien Skin University. User can use this websit to undstand the Sapien Skin University better and grt the information they want. Sapien Skin University is an online platform for trusted industry skin care professionals to sell educational courses. The courses can be videos, audio, quizzes, or articles. 
+We made this website because we wanted intrduce Sapien Skin University. Anyone can use this website gain more knowledge about the skin care industry and skin health. Sapien Skin University is an online platform for trusted industry skin care professionals to sell educational courses. The courses can be videos, audio, quizzes, or articles. The goal is to provide students short form information that makes complicated science easier to understand.
 
 ## Homepage Image:
 The following animation demonstrates the application functionality:
@@ -24,18 +24,19 @@ As a user I want search for what I need and get the right information at the fir
 ## Process
 
 ## Future Development
-* for user who has regist account with SAU they can have their own public web page to share their experience.
-* the other user think their exprience is helphul for them, they can give 👍 
+* for user who has registererd for an account with SAU they can have their own profile and track their progress.
+* the user will be able to rate the courses they take 👍 
+* administrators will be able to track their statistics and all data.
 
 ## Installation Dependencies:
 * npm
-* reaction
+* react
 
 ## Links to deployed site and Github
 * [Deployed Heroku site]
 * [Git Repository](https://github.com/ManuelaKenna/SapienAestheticUniversity)
 
-- sxzzGoogle Doc: https://docs.google.com/document/d/1_f6o84mI9TEDfKhepSmC1BKwlND1EqgElITPeeYrtr8/edit#
+- Google Doc: https://docs.google.com/document/d/1_f6o84mI9TEDfKhepSmC1BKwlND1EqgElITPeeYrtr8/edit#
 
 app
 
