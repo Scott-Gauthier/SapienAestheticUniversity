@@ -48,18 +48,19 @@ export const SAVE_CONTENT = gql`
   }
 `;
 
-// export const REMOVE_CONTENT = gql`
-//    mutation removeContent($contentId: String!) {
-//      removeContent(contentId: $contentId) {
-//        username
-//        email
-//        savedContent {
-//          contentId
-//          title
-//         description
-//          cost 
-//          creator
-//        }
-//      }
-//    }
-// `;
+export const REMOVE_CONTENT = gql`
+   mutation removeContent($contentId: String!) {
+     removeContent(contentId: $contentId) {
+      _id
+       username
+       email
+       savedContent {
+         contentId
+         title
+        description
+         cost 
+         creator
+       }
+     }
+   }
+`;
