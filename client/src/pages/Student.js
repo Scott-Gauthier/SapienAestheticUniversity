@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Row } from 'react-bootstrap';
+import { Container, Card, Col, Row } from 'react-bootstrap';
 import { useQuery } from "@apollo/client";
 import { QUERY_ALL_CONTENT } from '../utils/Queries';
 import SaveButton from "../components/SaveButton/SaveButton";

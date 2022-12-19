@@ -64,7 +64,7 @@ function App() {
           />
           <Route 
             path='*'
-            element={<h1 className='display-2'>Oops Under Construction! Coming Soon!</h1>}
+            element={<h1 className='display-2 text-light'>Oops Under Construction! Coming Soon!</h1>}
           />
         </Routes>
         <Footer/>
