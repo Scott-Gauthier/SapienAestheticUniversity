@@ -1,7 +1,6 @@
 # SapienAestheticUniversity
 
-## Descroption 
-
+## Description  
 We made this website because we wanted intrduce Sapien Skin University. Anyone can use this website gain more knowledge about the skin care industry and skin health. Sapien Skin University is an online platform for trusted industry skin care professionals to sell educational courses. The courses can be videos, audio, quizzes, or articles. The goal is to provide students short form information that makes complicated science easier to understand.
 
 ## Homepage Image:
@@ -15,8 +14,8 @@ As a user I want search for what I need and get the right information at the fir
 * 'WHEN' the user goes the homepage
 * 'THEN' user can SEARCH for class wich they are looking for and LOGIN or SIGN Up to they own account
 
-* 'WHEN' user scrop down 
-* 'THEN' user can see different subject
+* 'WHEN' user scrolls down 
+* 'THEN' user can see different class topics
 
 * 'WHEN' user click 'Add to curriculum'
 * 'THEN' user can have it on their account
@@ -27,6 +26,7 @@ As a user I want search for what I need and get the right information at the fir
 * for user who has registererd for an account with SAU they can have their own profile and track their progress.
 * the user will be able to rate the courses they take 👍 
 * administrators will be able to track their statistics and all data.
+
 
 ## Installation Dependencies:
 * npm

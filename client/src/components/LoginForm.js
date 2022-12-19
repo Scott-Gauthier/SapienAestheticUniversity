@@ -106,7 +106,6 @@ const LoginForm = () => {
 
         <Button 
           className="btn-dark"
-          // disabled={!(userFormData.email && userFormData.password)}
           type="submit"
           variant="success"
         >
