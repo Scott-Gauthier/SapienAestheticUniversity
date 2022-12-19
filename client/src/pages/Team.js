@@ -2,7 +2,7 @@ import React from "react";
 
 function InstructorPage(){
     return(
-        <main className="px-3 py-3">
+        <main className="px-3 py-3 text-light">
 
             <h2>Meet Stephanie</h2><p>Bio:</p>
 

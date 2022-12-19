@@ -81,7 +81,6 @@ body ::-webkit-scrollbar-thumb {
     z-index: -900;
   }
 }
-
 .red-border {
   border: 1px solid var(--error-message) !important;
 }
