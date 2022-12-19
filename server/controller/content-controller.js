@@ -1,4 +1,4 @@
-const { User, Content } = require('../models');
+const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
 module.exports = {
@@ -9,19 +9,19 @@ module.exports = {
             const updatedUser = await User.findOneAndUpdate(
                 { _id: user._id },
                 { $addToSet: { studentcontent: body } },
-                { new: true, runValidators: true }
+                { new: true }
             );
             return res.json(updatedUser);
         } catch (err) {
-            console.log(err);
-            return res.status(400).json(err);
+        console.log(err);
+        return res.status(400).json(err);
         }
     },
-
+  
     async removeContent({ user, params }, res) {
         const updatedUser = await User.findOneAndUpdate(
             { _id: user._id },
-            { $pull: { savedContent: { contentId: params.contentId } } },
+            { $pull: { studentcontent: { contentId: params.contentId } } },
             { new: true }
         );
         if (!updatedUser) {

@@ -113,21 +113,20 @@ const resolvers = {
         
     // saveContent: async (parent, args , context) => {
     //     if (context.user) {
-    //         const updatedUser = await User.findOneAndUpdate(
+    //         const updatedContent = await User.findOneAndUpdate(
     //             { _id: context.user_id },
-    //             { $push: { studentcontent: args._id }},
+    //             { $addToSet: { studentcontent: args._id }},
     //             { new: true }
     //         )
-    //         return updatedUser;
+    //         return updatedContent;
     //     }
     // },
         
     // removeContent: async (parent, args, context) => {
     //     if (context.content) {
-    //         const updatedUser = await User.findOneAndUpdate(
+    //         const updatedContent = await User.findOneAndUpdate(
     //             { _id: context.user_id },
-    //             { $ToSet: { studentcontent: args.content}},
-    //             { new: true }                    
+    //             { $pull: { studentcontent: args._id }}                 
     //         );
     //         return updatedContent;
     //     }

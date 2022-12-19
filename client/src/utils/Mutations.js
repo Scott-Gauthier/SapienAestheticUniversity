@@ -67,18 +67,35 @@ export const ADD_ORDER = gql`
   }
 `;
 
-// export const REMOVE_CONTENT = gql`
-//    mutation removeContent($contentId: String!) {
-//      removeContent(contentId: $contentId) {
-//        username
-//        email
-//        savedContent {
-//          contentId
-//          title
-//         description
-//          cost 
-//          creator
-//        }
-//      }
-//    }
-// `;
+export const ADD_ORDER = gql`
+  mutation addOrder($content: [ID]!) {
+    addOrder(content: $content) {
+      purchaseDate
+      content {
+        title
+        description
+        cost
+        image
+        video
+        creator {
+          creatorname
+          email
+        }
+      }
+    }
+  }
+`;
+
+export const REMOVE_CONTENT = gql`
+   mutation removeContent($contentId: ID!) {
+     removeContent(contentId: $contentId) {
+        savedContent {
+          contentId
+          title
+          description
+          cost 
+          creator
+       }
+     }
+   }
+`;
