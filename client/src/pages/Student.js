@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Card, Col, Row } from 'react-bootstrap';
 import { useQuery } from "@apollo/client";
 import { QUERY_ALL_CONTENT } from '../utils/Queries';
