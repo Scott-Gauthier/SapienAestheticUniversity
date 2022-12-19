@@ -8,8 +8,8 @@ module.exports = {
         try {
             const updatedUser = await User.findOneAndUpdate(
                 { _id: user._id },
-                { $addToSet: { savedContent: body } },
-                { new: true, runValidators: true }
+                { $addToSet: { studentcontent: body } },
+                { new: true }
             );
             return res.json(updatedUser);
         } catch (err) {
@@ -21,7 +21,7 @@ module.exports = {
     async removeContent({ user, params }, res) {
         const updatedUser = await User.findOneAndUpdate(
             { _id: user._id },
-            { $pull: { savedContent: { contentId: params.contentId } } },
+            { $pull: { studentcontent: { contentId: params.contentId } } },
             { new: true }
         );
         if (!updatedUser) {
@@ -29,5 +29,4 @@ module.exports = {
         }
         return res.json(updatedUser);
     },
-
 };

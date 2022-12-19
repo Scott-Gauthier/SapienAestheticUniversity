@@ -67,18 +67,18 @@ export const ADD_ORDER = gql`
   }
 `;
 
-// export const REMOVE_CONTENT = gql`
-//    mutation removeContent($contentId: String!) {
-//      removeContent(contentId: $contentId) {
-//        username
-//        email
-//        savedContent {
-//          contentId
-//          title
-//          description
-//          cost 
-//          creator
-//        }
-//      }
-//    }
-// `;
+
+export const REMOVE_CONTENT = gql`
+   mutation removeContent($contentId: ID!) {
+     removeContent(contentId: $contentId) {
+        savedContent {
+          contentId
+          title
+          description
+          cost 
+          creator
+       }
+     }
+   }
+`;
+

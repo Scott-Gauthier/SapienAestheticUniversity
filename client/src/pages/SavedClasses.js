@@ -9,6 +9,7 @@ function SavedClasses() {
 
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
+
     console.log(data);
 
   return (
@@ -36,6 +37,7 @@ function SavedClasses() {
       )}
       </Row> 
       </Container>
+      
     </div>
   )
 }

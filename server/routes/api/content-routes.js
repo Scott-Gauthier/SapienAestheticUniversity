@@ -11,3 +11,5 @@ router.route('/saveContent').put(authMiddleware, saveContent);
 
 
 module.exports = router;
+
+module.exports = router;
