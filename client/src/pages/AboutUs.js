@@ -7,6 +7,13 @@ import Steph from '../assets/Meet-the-owner/MeetStephanie.png';
 import Kristen from '../assets/Educators/Kristen/MeetKristen.png';
 import Jess from '../assets/Educators/Jess/MeetJess.png';
 
+
+const element = <h1>
+Sapien was built on the idea of informed consent, education, personal
+relationships, and meticulous esthetics practices to make you feel
+empowered to look and feel the way you want to.
+</h1>
+
 function CarouselFadeExample() {
       return (
         <div className= "col-md-10 carousel">
@@ -17,8 +24,8 @@ function CarouselFadeExample() {
               src= {Steph}
               alt="First slide"/>
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Owner of Sapien Skin</h3>
+              <p>An esthetician and science nerd</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -29,8 +36,8 @@ function CarouselFadeExample() {
             />
     
             <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3>Master Esthetician</h3>
+              <p>Passion for client care and treatments</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -41,9 +48,9 @@ function CarouselFadeExample() {
             />
     
             <Carousel.Caption>
-              <h3>Third slide label</h3>
+              <h3>Master Esthetician</h3>
               <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                Lover of potions and playing with lasers
               </p>
             </Carousel.Caption>
           </Carousel.Item>
@@ -75,11 +82,11 @@ function CarouselFadeExample() {
 //           Latin of persons, “to have discernment, be wise.“
 //         </blockquote>
 
-//         <p>
-//           Sapien was built on the idea of informed consent, education, personal
-//           relationships, and meticulous esthetics practices to make you feel
-//           empowered to look and feel the way you want to.
-//         </p>
+        // <p>
+        //   Sapien was built on the idea of informed consent, education, personal
+        //   relationships, and meticulous esthetics practices to make you feel
+        //   empowered to look and feel the way you want to.
+        // </p>
 
 //         <p>
 //           Here at Sapien, we care more about peer-reviewed studies and best
