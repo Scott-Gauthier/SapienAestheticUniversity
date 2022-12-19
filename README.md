@@ -25,7 +25,7 @@ As a user I want search for what I need and get the right information at the fir
 
 ## Future Development
 * for user who has register account with SAU they can have their own public web page to share their experience.
-* the other user think their exprience is helphul for them, they can give 👍 
+* the other user think their experience is helpful for them, they can give 👍 
 
 ## Installation Dependencies:
 * npm
