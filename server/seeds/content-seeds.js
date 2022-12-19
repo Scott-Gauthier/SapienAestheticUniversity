@@ -14,6 +14,20 @@ const seedContent = async () => {
         video: ``,
       },
       {
+        title: `Skin Anatomy 101`,
+        description: `Let’s get into the nitty gritty. I believe that knowing the basic anatomy and physiology of skin helps you to understand it’s key functions, what it needs to be healthy, function optimally, and how treatments tie in. Knowledge is power. Take this course to understand the biology of skin.`,
+        cost: `$350`,
+        image: `8`,
+        video: ``,
+      },
+      {
+        title: `Acne 101`,
+        description: `Most of us have had to deal with acne at some point or another as it is a common chronic inflammatory skin condition that affects about 89% of adolescents, and often persists into adulthood due to a myriad of reasons. We'll dive in deeper on the causes and types of acne and the best practices to deal with it.`,
+        cost: `$250`,
+        image: `9`,
+        video: ``,
+      },
+      {
         title: `Collagen 101`,
         description: `Collagen is EVERYWHERE. Literally. If you've explored any portion of the skin-care world, then you're likely familiar with collagen, the amazing protein that deserves all of the hype that it receives. Understanding this dermal protein is imperative in understanding skin aging. Let's talk more about it. `,
         cost: `$250`,
@@ -29,48 +43,34 @@ const seedContent = async () => {
       },
       {
         title: `Why You Should Wear SPF Everyday`,
-        description: `If you're unhappy with shaving, tweezing, or waxing to remove unwanted hair and especially if you have sensitive skin laser hair removal may be an option worth considering. With its high degree of accuracy and minimal pain, laser hair removal can remove unwanted hair in a fraction of the time it takes other methods.`,
+        description: `Yes, every day. Yes, inside. Yes, during the winter. Yes, when it’s cloudy. The most important product you can use is Sun Protection Factor otherwise known as SPF, but why? Join us in this course to learn the importance of SPF and why you should apply it everyday no matter what.`,
         cost: `$200`,
         image: `4`,
         video: ``,
       },
       {
         title: `Hyperpigmentation 101`,
-        description: `Fractional laser is designed to treat surgical and acne scars on any area of the body, including the face. It can be safely used on most skin types. During your consultation, we will determine if you are a good candidate for the procedure based on a variety of factors. `,
+        description: `From freckles to melasma, pigmentation changes in the skin are a common occurrence most people will experience through different stages of life. However, the causes of hyperpigmentation (also known as dyschromia) are often misunderstood, and the road to correcting discoloration can seem elusive and long. This course will cover the different causes of hyperpigmentation and how to combat them in a safe way.`,
         cost: `$250`,
         image: `5`,
         video: ``,
       },
       {
-        title: `Natural vs. Medical Grade Products`,
-        description: `This service is a Treatment Facial PLUS Microneedling to stimulate the top layers of the skin which release of natural growth factors naturally encouraging rebuilding your own collagen and elastin in order to improve fine lines, wrinkles, sagging skin, texture & tone. Multiple treatments and home-care are recommended for optimal results and 3-5 days downtime is typical.
-
-        Client is required to bring their own UPF protection to the appointment as sunscreen cannot be applied after needling and light exposure can damage the freshly needled skin. Bluestone shields are available to purchase at your appointment time.`,
+        title: `The Importance of Retinol`,
+        description: `There are a wide number of factors to consider when it comes to maintaining radiant skin, but arguably the most important molecule, the one which is responsible for both optimal function and repairs to our DNA, is Vitamin A, otherwise known as retinol.
+        
+        Vitamin A is the MVP of any reputable skincare routine (other than SPF, which is nonegtioable), and there are many different types of topical vitamin A, such as retinoids, retinols, retinals, tretinioin, retinoic acid, and adapalene. These derivatives of vitamin A are extremely effective at slowing the aging process, among other things. This course will cover all of this and more.`,
         cost: `$200`,
         image: `6`,
         video: ``,
       },
       {
         title: `LED Light Therapy`,
-        description: `A lifting technique designed to give you longer-looking lashes without the need for lash extensions. All treatments include a lash tint for your upper lashes, though this may not replace mascara for those clients with petite or fine lashes.  `,
+        description: `LED light therapy can increase circulation, accelerate tissue repair, kill acne bacteria, decrease inflammation, improve skin tone, texture and clarity, decrease under eye wrinkles as well as ease muscle and joint pain, stiffness, spasm, and pain associated with arthritis.
+
+        Simply put, LED therapy provides compromised cells with added energy so that the cell’s performance is enhanced. Learn more by taking this course with us.`,
         cost: `$300`,
         image: `7`,
-        video: ``,
-      },
-      {
-        title: `Skin Anatomy 101`,
-        description: `Laser resurfacing facial is a revolutionary cosmetic procedure that uses laser beams to improve the look of your skin. This non-surgical treatment works by targeting damaged or wrinkled areas and eliminates dead cells, resulting in a diminished appearance of fine lines, wrinkles, enlarged pores and acne scars. *All new clients must book a consultation prior to making any booking for laser services. `,
-        cost: `$350`,
-        image: `8`,
-        video: ``,
-      },
-      {
-        title: `Acne 101`,
-        description: `Intense pulsed light (IPL) therapy, aka photofacial, is a way to improve the color and texture of your skin without surgery. It can undo some of the visible damage caused by sun exposure — called photoaging. You may notice it mostly on your face, neck, hands, or chest where your skin has been exposed to light the most.
-
-        IPL is indicated if you have red, brown, or splotchy skin and have relatively fair skin.`,
-        cost: `$250`,
-        image: `9`,
         video: ``,
       },
     ],
