@@ -52,16 +52,25 @@
 }
 
 body {
-  margin: 0;
   overflow-y: overlay;
   font-family: 'Helvetica', 'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-style: var(--white);
 }
 
 code {
   font-family: Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.carousel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
 }
 
 ::-webkit-scrollbar {
