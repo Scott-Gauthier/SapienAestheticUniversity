@@ -19,7 +19,7 @@ function HeroCarousel() {
         />
         <Carousel.Caption className='justify-content-center'>
           <h2>Sapien Aesthetic University</h2>
-          <h4>We offer multiple classes on various topics.</h4>
+          <h4>We offer multiple classes on various skincare topics.</h4>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -30,8 +30,8 @@ function HeroCarousel() {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h2>Explore our list of classes.</h2>
-          <h4>Become a skincare expert.</h4>
+          <h2>Become a skincare expert.</h2>
+          <h4>Explore our list of classes today.</h4>
         </Carousel.Caption>
       </Carousel.Item>
       
