@@ -10,7 +10,7 @@ const orderSchema = new Schema({
   orderedContent: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Content'
+      ref: 'content'
     }
   ]
 });
