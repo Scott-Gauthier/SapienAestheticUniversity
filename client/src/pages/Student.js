@@ -20,7 +20,7 @@ function Student() {
         <Row xs={1} md={3} className="g-4 py-3">
 
           <Col>
-            <Card key={element.id}>
+            <Card key={element._id}>
               <Card.Img variant="top" src={require("../assets/SpacePicsForArticles/space"+element.image+".png")}/>
               <Card.Body>
                 <Card.Title>{element.title}</Card.Title>
