@@ -5,7 +5,7 @@ import './DeleteButton.css';
 
 function DeleteButton(props) {
 
-    const { loading, error, data } = useMutation(REMOVE_CONTENT);
+    const { loading, error } = useMutation(REMOVE_CONTENT);
 
     if (loading) return 'Loading...';
     if (error) return `Error! ${error.message}`;
