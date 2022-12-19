@@ -1,45 +1,15 @@
 import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
-import { useQuery } from "@apollo/client";
-import { QUERY_ALL_CONTENT } from '../utils/Queries';
 import HeroCarousel from '../components/HeroCarousel';
-import SaveButton from "../components/SaveButton/SaveButton";
+import Student from './Student'
 
-function ClassPage() {
-  const { loading, error, data } = useQuery(QUERY_ALL_CONTENT);
-
-  if (loading) return 'Loading...';
-  if (error) return `Error! ${error.message}`;
+function Home() {
 
   return (
     <div>
-       <HeroCarousel/>
-
-      {data.AllContent.map((element) => {
-        console.log(element)
-        
-      return (
-        <Row xs={1} md={3} className="g-4 py-3">
-
-          <Col>
-            <Card key={element.id}>
-              <Card.Img variant="top" src={require("../assets/SpacePicsForArticles/space"+element.image+".png")}/>
-              <Card.Body>
-                <Card.Title>{element.title}</Card.Title>
-                <Card.Text>
-                
-                  {element.description}
-
-                </Card.Text>
-              <SaveButton/>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row> 
-        )}
-      )}
+      <HeroCarousel/>
+      <Student/>
     </div>
   )
 }
 
-export default ClassPage;
+export default Home;
