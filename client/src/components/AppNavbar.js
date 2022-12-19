@@ -26,6 +26,10 @@ const AppNavbar = () => {
               {/* if user is logged in */}
               {Auth.loggedIn() ? (
                 <>
+                  <Nav.Link as={Link} to='/student'>
+                    Profile
+                  </Nav.Link>
+
                   <Nav.Link as={Link} to='/saved'>
                     Saved Classes
                   </Nav.Link>
