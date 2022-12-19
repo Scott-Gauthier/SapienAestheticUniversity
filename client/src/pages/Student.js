@@ -1,13 +1,15 @@
 import React from "react";
 import { Container, Card, Col, Row } from 'react-bootstrap';
+
+import Auth from "../utils/Auth";
 import { useQuery } from "@apollo/client";
 import { QUERY_ALL_CONTENT } from '../utils/Queries';
+
 import SaveButton from "../components/SaveButton/SaveButton";
 import DeleteButton from "../components/DeleteButton/DeleteButton";
 import ClassList from "../components/ClassList";
-import Auth from "../utils/Auth";
 
-function Student() {
+const Student = () => { 
   const { loading, error, data } = useQuery(QUERY_ALL_CONTENT);
 
   if (loading) return 'Loading...';
@@ -34,8 +36,14 @@ function Student() {
                   <Card.Text>
                     {element.description}
                   </Card.Text>
-                  <SaveButton id={element._id}/>
-                  <DeleteButton id={element._id}/>
+
+                  {Auth.loggedIn() ? (
+                    <>
+                   <SaveButton/>
+                   <DeleteButton/>
+                    </> ) : ( <> </>
+                  )}
+
                 </Card.Body>
               </Card>
             </Col>
