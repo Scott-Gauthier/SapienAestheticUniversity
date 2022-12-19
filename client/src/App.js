@@ -11,7 +11,7 @@ import AppNavbar from './components/AppNavbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
-import Team from './pages/Team';
+import Instructor from './pages/Instructor';
 import Student from './pages/Student';
 import SavedClasses from './pages/SavedClasses';
 
@@ -52,7 +52,7 @@ function App() {
           />
           <Route 
             path='/team' 
-            element={<Team/>} 
+            element={<Instructor/>} 
           />
             <Route 
             path='/student' 
