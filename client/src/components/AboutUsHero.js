@@ -4,7 +4,7 @@ function AboutUsHero() {
   return (
     <>
         <div
-          className="col-md-6 m-auto py-4 shadow-4 rounded-3"
+          className="col-md-5 m-auto py-4 shadow-4 rounded-3"
           style={{ backgroundColor: "hsl(0, 0%, 94%)" }}
         >
           <h5 className="text-center">
