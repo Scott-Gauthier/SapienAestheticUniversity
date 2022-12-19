@@ -9,7 +9,7 @@ function HeroCarousel() {
   };
 
   return (
-  <div className='col-md-10 carousel'>  
+  <div className='justify-content-center'>  
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
@@ -18,7 +18,7 @@ function HeroCarousel() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h2>Welcome to Sapien Aesthetic University</h2>
+          <h2>Sapien Aesthetic University</h2>
           <h4>We offer multiple classes on various topics.</h4>
         </Carousel.Caption>
       </Carousel.Item>
