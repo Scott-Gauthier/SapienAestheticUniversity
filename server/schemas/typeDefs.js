@@ -61,8 +61,8 @@ const typeDefs = gql`
         addOrder(content: [ID]!): Order
         addUser(username: String!, email: String!, password: String!): Auth
         addContent(content: String!): Creator
-        saveContent(_id: ID!): User
-        removeContent(content: String!): User
+        saveContent(studentcontent: ID!): User
+        removeContent(studentcontent: ID!): [User]
     }
     `;
 

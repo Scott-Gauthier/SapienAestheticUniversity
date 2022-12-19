@@ -70,17 +70,16 @@ const resolvers = {
     //     }
     // },
         
-    // removeContent: async (parent, args, context) => {
-    //     if (context.content) {
-    //         const updatedContent = await User.findOneAndUpdate(
-    //             { _id: context.user_id },
-    //             { $pull: { studentcontent: args._id }}                 
-    //         );
-    //         return updatedContent;
-    //     }
-    //     throw new AuthenticationError(`The user must log in`)
-    //     }
+    removeContent: async (parent, args, context) => {
+        if (context.user) {
+            console.log(`Got to the resolvers ${context.user_id}!`)
+            const updatedContent = await User.findOneAndUpdate(
+                { _id: context.user._id },
+                { $pull: { studentcontent: args._id }}                 
+            );
+            return updatedContent;
+        }
     }
-
+};
 
 module.exports = resolvers;

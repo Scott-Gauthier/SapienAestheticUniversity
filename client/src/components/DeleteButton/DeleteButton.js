@@ -4,7 +4,6 @@ import { REMOVE_CONTENT } from '../../utils/Mutations';
 import './DeleteButton.css';
 
 function DeleteButton(props) {
-
     const { loading, error, data } = useMutation(REMOVE_CONTENT);
 
     if (loading) return 'Loading...';
@@ -12,7 +11,7 @@ function DeleteButton(props) {
   
     return (
 
-        <div className="material-symbols-outlined" id={props.id} onClick={() => REMOVE_CONTENT(props.id)}>
+        <div className="material-symbols-outlined" id={props.data} onClick={() => REMOVE_CONTENT(props.data)}>
             <span>close</span>
         </div>
     )

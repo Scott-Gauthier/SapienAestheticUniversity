@@ -17,15 +17,15 @@ function Student() {
         {data.AllContent.map((element) => {
           return (
             <Col>
-              <Card id={element._id}>
+              <Card>
                 <Card.Img variant="top" src={require("../assets/SpacePicsForArticles/space" + element.image + ".png")} />
                 <Card.Body>
                   <Card.Title>{element.title}</Card.Title>
                   <Card.Text>
                     {element.description}
                   </Card.Text>
-                  <SaveButton id={element._id}/>
-                  <DeleteButton id={element._id}/>
+                  <SaveButton key={`s${element._id}`} data={element._id}/>
+                  <DeleteButton key={`d${element._id}`} data={element._id}/>
                 </Card.Body>
               </Card>
             </Col>
