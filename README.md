@@ -13,7 +13,7 @@ The following animation demonstrates the application functionality:
 As a user I want search for what I need and get the right information at the first moment. 
 
 * 'WHEN' the user goes the homepage
-* 'THEN' user can SEARCH for class wich they are looking for and LOGIN or SIGN Up to they own account
+* 'THEN' user can SEARCH for class which they are looking for and LOGIN or SIGN Up to they own account
 
 * 'WHEN' user scrolls down 
 * 'THEN' user can see different class topics
@@ -25,7 +25,7 @@ As a user I want search for what I need and get the right information at the fir
 
 ## Future Development
 * for user who has register account with SAU they can have their own public web page to share their experience.
-* the other user think their exprience is helphul for them, they can give 👍 
+* the other user think their experience is helpful for them, they can give 👍 
 
 ## Installation Dependencies:
 * npm
@@ -35,9 +35,7 @@ As a user I want search for what I need and get the right information at the fir
 * [Deployed Heroku site]
 * [Git Repository](https://github.com/ManuelaKenna/SapienAestheticUniversity)
 
-- sxzzGoogle Doc: https://docs.google.com/document/d/1_f6o84mI9TEDfKhepSmC1BKwlND1EqgElITPeeYrtr8/edit#
-
-app
+- Google Doc: https://docs.google.com/document/d/1_f6o84mI9TEDfKhepSmC1BKwlND1EqgElITPeeYrtr8/edit#
 
 ## Authors
 * Manuela Kenna 

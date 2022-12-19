@@ -9,7 +9,7 @@ import Jess from '../assets/Educators/Jess/MeetJess.png';
 
 function CarouselFadeExample() {
       return (
-        <div className= "col-md-10 carousel">
+        <div className= "col-md-10 carousel py-4">
         <Carousel fade>
           <Carousel.Item>
             <img
@@ -53,11 +53,6 @@ function CarouselFadeExample() {
     }
     
     export default CarouselFadeExample;
-
-
-
-
-
 
 //   return (
 //     <main className="px-3 py-3">
