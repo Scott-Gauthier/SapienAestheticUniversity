@@ -5,8 +5,8 @@ import AboutUsCarousel from '../components/AboutUsCarousel';
 function AboutUs() {
   return (
     <div>
-        <AboutUsHero/>
       <AboutUsCarousel/>
+      <AboutUsHero/>
     </div>
   )
 };
