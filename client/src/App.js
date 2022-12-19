@@ -51,7 +51,7 @@ function App() {
             element={<AboutUs/>} 
           />
           <Route 
-            path='/team' 
+            path='/instructors' 
             element={<Instructor/>} 
           />
             <Route 
