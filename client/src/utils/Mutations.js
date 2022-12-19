@@ -75,7 +75,7 @@ export const ADD_ORDER = gql`
 //        savedContent {
 //          contentId
 //          title
-//         description
+//          description
 //          cost 
 //          creator
 //        }

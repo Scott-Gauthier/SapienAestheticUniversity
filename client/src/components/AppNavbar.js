@@ -45,7 +45,7 @@ const AppNavbar = () => {
                 </Nav.Link>
 
                 <Nav.Link as={Link} to='/team'>
-                  Meet the Instructors 
+                 Instructors 
                 </Nav.Link>
   
                 <Nav.Link onClick={() => setShowModal(true)}>Login or Sign Up</Nav.Link> 

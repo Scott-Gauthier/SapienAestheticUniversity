@@ -12,6 +12,7 @@ function Student() {
 
   return (
     <div>
+      <h1 className="text-light text-center py-3">List of Classes</h1> 
       <Container>
       <Row xs={1} md={3} className="py-3">
       {data.AllContent.map((element) => {
