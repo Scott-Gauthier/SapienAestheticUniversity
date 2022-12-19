@@ -67,7 +67,7 @@ const LoginForm = () => {
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Your email"
+            placeholder="Email"
             name="email"
             onChange={handleInputChange}
             value={userFormData.email}
@@ -82,7 +82,7 @@ const LoginForm = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
-            placeholder="Your password"
+            placeholder="Password"
             name="password"
             onChange={handleInputChange}
             value={userFormData.password}
@@ -104,8 +104,9 @@ const LoginForm = () => {
           />
         </Form.Group>
 
-        <Button
-          disabled={!(userFormData.email && userFormData.password)}
+        <Button 
+          className="btn-dark"
+          // disabled={!(userFormData.email && userFormData.password)}
           type="submit"
           variant="success"
         >

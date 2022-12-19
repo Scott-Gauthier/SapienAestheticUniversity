@@ -18,7 +18,7 @@ function HeroCarousel() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h2>Become a skin care expert.</h2>
+          <h2>Welcome to Sapien Aesthetic University</h2>
           <h4>We offer multiple classes on various topics.</h4>
         </Carousel.Caption>
       </Carousel.Item>
@@ -31,7 +31,7 @@ function HeroCarousel() {
         />
         <Carousel.Caption>
           <h2>Explore our list of classes.</h2>
-          <h4>You won't regret it.</h4>
+          <h4>Become a skincare expert.</h4>
         </Carousel.Caption>
       </Carousel.Item>
       
