@@ -3,7 +3,7 @@ import React from "react";
 function HomeIntro() {
   return (
     <>
-      <div className="py-4">
+      <div className="py-3">
         <div
           className="col-md-8 m-auto py-3 shadow-4 rounded-3"
           style={{ backgroundColor: "hsl(0, 0%, 95%)" }}

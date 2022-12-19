@@ -44,7 +44,7 @@ const AppNavbar = () => {
                   About Us
                 </Nav.Link>
 
-                <Nav.Link as={Link} to='/team'>
+                <Nav.Link as={Link} to='/instructors'>
                  Instructors 
                 </Nav.Link>
   
