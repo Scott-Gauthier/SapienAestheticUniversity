@@ -17,14 +17,14 @@ function Student() {
           console.log(element._id)
           return (
             <Col>
-              <Card key={element.id}>
+              <Card id={element._id}>
                 <Card.Img variant="top" src={require("../assets/SpacePicsForArticles/space" + element.image + ".png")} />
                 <Card.Body>
                   <Card.Title>{element.title}</Card.Title>
                   <Card.Text>
                     {element.description}
                   </Card.Text>
-                  <SaveButton />
+                  <SaveButton id={element._id}/>
                 </Card.Body>
               </Card>
             </Col>
