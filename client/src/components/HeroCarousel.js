@@ -9,7 +9,7 @@ function HeroCarousel() {
   };
 
   return (
-  <div class>  
+  <div className='col-md-10 carousel'>  
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
