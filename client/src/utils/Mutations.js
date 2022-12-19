@@ -38,15 +38,6 @@ export const ADD_USER = gql`
 //   }
 // `;
 
-export const SAVE_CONTENT = gql`
-  mutation saveContent($id: ID!) {
-    saveContent(_id: $id) {
-      savedContent {
-        _id
-      }
-    }
-  }
-`;
 
 export const ADD_ORDER = gql`
   mutation addOrder($content: [ID]!) {
@@ -67,15 +58,34 @@ export const ADD_ORDER = gql`
   }
 `;
 
+export const SAVE_CONTENT = gql`
+  mutation saveContent($content: SavedContentInput!) {
+    saveContent(content: $content) {
+      username
+      email
+      savedContents {
+        title
+        description
+        cost
+        image
+        video
+        creator
+      }
+    }
+  }
+`;
 
 export const REMOVE_CONTENT = gql`
-   mutation removeContent($contentId: ID!) {
+   mutation removeContent($contentId: String!) {
      removeContent(contentId: $contentId) {
-        savedContent {
-          contentId
+      username
+      email
+        savedContents {
           title
           description
-          cost 
+          cost
+          image
+          video
           creator
        }
      }

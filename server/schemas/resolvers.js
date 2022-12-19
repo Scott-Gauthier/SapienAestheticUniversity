@@ -47,40 +47,30 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        
-    // addContent: async (parent, args , context) => {
-    //     if (context.content) {
-    //         const updatedContent = await Content.findOneAndUpdate(
-    //             { _id: context.user_id },
-    //             { $push: { savedContent: args.input }},
-    //             { new: true }
-    //         )
-    //         return updatedContent;
-    //     }
+
+    saveContent: async (parent, { content } , context) => {
+        if (context.user) {
+            const updatedContent = await User.findOneAndUpdate(
+                { _id: context.user_id },
+                { $addToSet: { savedContents: content }},
+                { new: true }
+            )
+            return updatedUser;
+        }
+        throw new AuthenticationError('You need to be logged in!')
     },
         
-    // saveContent: async (parent, args , context) => {
-    //     if (context.user) {
-    //         const updatedContent = await User.findOneAndUpdate(
-    //             { _id: context.user_id },
-    //             { $addToSet: { studentcontent: args._id }},
-    //             { new: true }
-    //         )
-    //         return updatedContent;
-    //     }
-    // },
-        
-    // removeContent: async (parent, args, context) => {
-    //     if (context.content) {
-    //         const updatedContent = await User.findOneAndUpdate(
-    //             { _id: context.user_id },
-    //             { $pull: { studentcontent: args._id }}                 
-    //         );
-    //         return updatedContent;
-    //     }
-    //     throw new AuthenticationError(`The user must log in`)
-    //     }
+    removeContent: async (parent, { contentId }, context) => {
+        if (context.user) {
+            const updatedUser = await User.findOneAndUpdate(
+                { _id: context.user_id },
+                { $pull: { savedContents: {contentId: contentId} }},
+                { new: true }                 
+            );
+            return updatedUser;
+        }
+        }
     }
-
+};
 
 module.exports = resolvers;
