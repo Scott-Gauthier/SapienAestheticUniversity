@@ -9,7 +9,7 @@ function HeroCarousel() {
   };
 
   return (
-  <div className='justify-content-center'>  
+  <div className='col-md-8 m-auto py-2'>  
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
@@ -17,7 +17,7 @@ function HeroCarousel() {
           src="https://images.unsplash.com/photo-1504221507732-5246c045949b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
           alt="First slide"
         />
-        <Carousel.Caption>
+        <Carousel.Caption className='justify-content-center'>
           <h2>Sapien Aesthetic University</h2>
           <h4>We offer multiple classes on various topics.</h4>
         </Carousel.Caption>

@@ -3,7 +3,6 @@ import HeroCarousel from '../components/HeroCarousel';
 import Student from './Student'
 
 function Home() {
-
   
   return (
     <div>
