@@ -13,11 +13,21 @@ function SavedClasses() {
     console.log(data);
 
   return (
-    <div>
-      <h1 className='text-light text-center py-3'>Saved Classes</h1>
+      <>
+      <div className="py-4">
+      <div
+        className="col-md-6 m-auto py-3 shadow-4 rounded-3"
+        style={{ backgroundColor: "hsl(0, 0%, 95%)" }}
+      >
+        <h1 className="text-center fw-bold">
+          SAVED CLASSES 
+        </h1>
+
+        <hr className="my-2" />
+      </div>  
 
       <Container>
-      <Row xs={1} md={3} className="py-3">
+      <Row xs={1} md={3} className="g-4 py-3">
       {data.AllContent.map((element) => {
         console.log(element)
       return (
@@ -40,6 +50,7 @@ function SavedClasses() {
       </Container>
       
     </div>
+    </>
   )
 }
 
