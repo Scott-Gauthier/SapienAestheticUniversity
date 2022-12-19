@@ -13,6 +13,7 @@ function Student() {
 
   return (
     <div>
+    
       <Row xs={1} md={3} className="g-4 py-3">
         {data.AllContent.map((element) => {
           return (
@@ -33,6 +34,7 @@ function Student() {
         }
         )}
       </Row>
+
     </div>
   )
 }

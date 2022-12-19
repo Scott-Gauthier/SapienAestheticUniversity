@@ -67,6 +67,7 @@ export const ADD_ORDER = gql`
   }
 `;
 
+
 export const REMOVE_CONTENT = gql`
    mutation removeContent($contentId: ID!) {
      removeContent(contentId: $contentId) {
@@ -80,3 +81,4 @@ export const REMOVE_CONTENT = gql`
      }
    }
 `;
+
