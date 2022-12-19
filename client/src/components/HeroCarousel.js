@@ -9,7 +9,7 @@ function HeroCarousel() {
   };
 
   return (
-  <div className='col-md-8 m-auto py-2'>  
+  <div className='col-md-9 m-auto py-2'>  
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img

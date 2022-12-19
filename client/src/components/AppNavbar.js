@@ -13,7 +13,7 @@ const AppNavbar = () => {
 
   return (
     <>
-      <Navbar className='mb-auto p-3' bg='dark' variant='dark' expand='lg'>
+      <Navbar className='mb-auto' bg='dark' variant='dark' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
             <img src={LOGO} alt='logo' style={{ width:"80px", height:"80px" }}/> Sapien Aesthetic University 
