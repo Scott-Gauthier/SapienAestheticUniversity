@@ -9,7 +9,7 @@ function HeroCarousel() {
   };
 
   return (
-  <div>  
+  <div class>  
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
