@@ -1,8 +1,8 @@
-const Admin = require('./admin');
-const Content = require('./content');
-const Creator = require('./creator');
-const Order = require('./order');
-const User = require('./user');
+const Admin = require('./Admin');
+const Content = require('./Content');
+const Creator = require('./Creator');
+const Order = require('./Order');
+const User = require('./User');
 
 module.exports = { Admin, Content, Creator, User, Order };
 
