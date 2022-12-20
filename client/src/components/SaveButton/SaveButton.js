@@ -4,7 +4,8 @@ import { SAVE_CONTENT } from '../../utils/Mutations';
 import './SaveButton.css';
 
 function SaveButton(props) {
-    const { loading, error, data } = useMutation(SAVE_CONTENT);
+
+    const { loading, error } = useMutation(SAVE_CONTENT);
 
     if (loading) return 'Loading...';
     if (error) return `Error! ${error.message}`;

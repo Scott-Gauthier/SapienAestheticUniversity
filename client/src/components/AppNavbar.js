@@ -13,7 +13,7 @@ const AppNavbar = () => {
 
   return (
     <>
-      <Navbar className='mb-auto p-3' bg='dark' variant='dark' expand='lg'>
+      <Navbar className='m-auto' bg='dark' variant='dark' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
             <img src={LOGO} alt='logo' style={{ width:"80px", height:"80px" }}/> Sapien Aesthetic University 
@@ -44,8 +44,8 @@ const AppNavbar = () => {
                   About Us
                 </Nav.Link>
 
-                <Nav.Link as={Link} to='/team'>
-                  Meet the Instructors 
+                <Nav.Link as={Link} to='/instructors'>
+                 Instructors 
                 </Nav.Link>
   
                 <Nav.Link onClick={() => setShowModal(true)}>Login or Sign Up</Nav.Link> 

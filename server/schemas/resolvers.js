@@ -47,37 +47,28 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        
-    // addContent: async (parent, args , context) => {
-    //     if (context.content) {
-    //         const updatedContent = await Content.findOneAndUpdate(
-    //             { _id: context.user_id },
-    //             { $push: { savedContent: args.input }},
-    //             { new: true }
-    //         )
-    //         return updatedContent;
-    //     }
+
+    saveContent: async (parent, { content } , context) => {
+        if (context.user) {
+            const updatedContent = await User.findOneAndUpdate(
+                { _id: context.user_id },
+                { $addToSet: { savedContents: content }},
+                { new: true }
+            )
+            return updatedUser;
+        }
+        throw new AuthenticationError('You need to be logged in!')
     },
         
-    // saveContent: async (parent, args , context) => {
-    //     if (context.user) {
-    //         const updatedContent = await User.findOneAndUpdate(
-    //             { _id: context.user_id },
-    //             { $addToSet: { studentcontent: args._id }},
-    //             { new: true }
-    //         )
-    //         return updatedContent;
-    //     }
-    // },
-        
-    removeContent: async (parent, args, context) => {
+    removeContent: async (parent, { contentId }, context) => {
         if (context.user) {
-            console.log(`Got to the resolvers ${context.user_id}!`)
-            const updatedContent = await User.findOneAndUpdate(
-                { _id: context.user._id },
-                { $pull: { studentcontent: args._id }}                 
+            const updatedUser = await User.findOneAndUpdate(
+                { _id: context.user_id },
+                { $pull: { savedContents: {contentId: contentId} }},
+                { new: true }                 
             );
-            return updatedContent;
+            return updatedUser;
+        }
         }
     }
 };
