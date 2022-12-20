@@ -32,16 +32,6 @@ const typeDefs = gql`
         # creator: [Creator]
     }
 
-    type Order {
-        _id: ID
-        purchaseDate: String
-        content: [Content]
-    }
-
-    type Checkout {
-        session: ID
-    }
-
     type Auth {
         token: ID
         user: User
@@ -51,14 +41,10 @@ const typeDefs = gql`
         AllContent: [Content]
         # AllUser: User
         getUser: User
-        # GetTeacherContent: Creator
-        order(_id: ID!): Order
-        checkout(AllContent: [ID]!): Checkout
     }
 
     type Mutation {
         login(email: String!, password: String!): Auth
-        addOrder(content: [ID]!): Order
         addUser(username: String!, email: String!, password: String!): Auth
         addContent(content: String!): Creator
         saveContent(studentcontent: ID!): User
