@@ -12,7 +12,7 @@ function DeleteButton(props) {
   
     return (
 
-        <div className="material-symbols-outlined" id={props.id} onClick={() => REMOVE_CONTENT(props.id)}>
+        <div className="material-symbols-outlined" id={props.data} onClick={() => REMOVE_CONTENT(props.data)}>
             <span>close</span>
         </div>
     )

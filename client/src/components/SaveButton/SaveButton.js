@@ -12,7 +12,7 @@ function SaveButton(props) {
   
     return (
 
-        <div className="material-symbols-outlined" id={props.id} onClick={() => SAVE_CONTENT(props.id)}>
+        <div className="material-symbols-outlined" id={props._id} onClick={() => SAVE_CONTENT(props.data)}>
             <span>favorite</span>
         </div>
     )

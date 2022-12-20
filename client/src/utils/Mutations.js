@@ -76,16 +76,13 @@ export const SAVE_CONTENT = gql`
 `;
 
 export const REMOVE_CONTENT = gql`
-   mutation removeContent($contentId: String!) {
+   mutation removeContent($contentId: ID!) {
      removeContent(contentId: $contentId) {
-      username
-      email
-        savedContents {
+        savedContent {
+          contentId
           title
           description
-          cost
-          image
-          video
+          cost 
           creator
        }
      }

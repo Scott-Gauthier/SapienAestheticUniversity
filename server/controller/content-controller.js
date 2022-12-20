@@ -18,10 +18,11 @@ module.exports = {
         }
     },
   
-    async removeContent({ user, params }, res) {
+    async removeContent({ user, body }, res) {
+        console.log(`MAde it to the controller ${body}!`);
         const updatedUser = await User.findOneAndUpdate(
             { _id: user._id },
-            { $pull: { studentcontent: { contentId: params.contentId } } },
+            { $pull: { studentcontent: { contentId: body } } },
             { new: true }
         );
         if (!updatedUser) {

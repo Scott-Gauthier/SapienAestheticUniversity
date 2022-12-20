@@ -29,7 +29,7 @@ const Student = () => {
         {data.AllContent.map((element) => {
           return (
             <Col>
-              <Card id={element._id}>
+              <Card>
                 <Card.Img variant="top" src={require("../assets/SpacePicsForArticles/space" + element.image + ".png")} />
                 <Card.Body>
                   <Card.Title className="fw-bold">{element.title}</Card.Title>
