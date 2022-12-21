@@ -13,7 +13,7 @@ const AppNavbar = () => {
 
   return (
     <>
-      <Navbar bg='dark' variant='dark' expand='lg'>
+      <Navbar className='m-auto' bg='dark' variant='dark' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
             <img src={LOGO} alt='logo' style={{ width:"80px", height:"80px" }}/> Sapien Aesthetic University 
@@ -26,6 +26,10 @@ const AppNavbar = () => {
               {/* if user is logged in */}
               {Auth.loggedIn() ? (
                 <>
+                  <Nav.Link as={Link} to='/student'>
+                    Profile
+                  </Nav.Link>
+
                   <Nav.Link as={Link} to='/saved'>
                     Saved Classes
                   </Nav.Link>
@@ -40,8 +44,8 @@ const AppNavbar = () => {
                   About Us
                 </Nav.Link>
 
-                <Nav.Link as={Link} to='/team'>
-                  Meet the Instructors 
+                <Nav.Link as={Link} to='/instructors'>
+                 Instructors 
                 </Nav.Link>
   
                 <Nav.Link onClick={() => setShowModal(true)}>Login or Sign Up</Nav.Link> 
@@ -60,10 +64,11 @@ const AppNavbar = () => {
         onHide={() => setShowModal(false)}
         aria-labelledby='signup-modal'>
         {/* tab container to do either signup or login component */}
+        
         <Tab.Container defaultActiveKey='login'>
           <Modal.Header closeButton>
-            <Modal.Title id='signup-modal'>
-              <Nav variant='pills'>
+            <Modal.Title>
+              <Nav className='nav-pills'>
                 <Nav.Item>
                   <Nav.Link eventKey='login'>Login</Nav.Link>
                 </Nav.Item>

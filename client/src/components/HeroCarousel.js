@@ -9,7 +9,7 @@ function HeroCarousel() {
   };
 
   return (
-  <div>  
+  <div className='col-md-9 m-auto py-2'>  
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
@@ -18,8 +18,8 @@ function HeroCarousel() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h2>Become a skin care expert.</h2>
-          <h4>We offer multiple classes on various topics.</h4>
+          <h2>Sapien Aesthetic University</h2>
+          <h4>We offer multiple classes on various skincare topics.</h4>
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -30,8 +30,8 @@ function HeroCarousel() {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h2>Explore our list of classes.</h2>
-          <h4>You won't regret it.</h4>
+          <h2>Become a skincare expert.</h2>
+          <h4>Explore our list of classes today.</h4>
         </Carousel.Caption>
       </Carousel.Item>
       

@@ -6,7 +6,8 @@ class MyVideoComponent extends React.Component {
     render() {
       return (
         <video width="50%" height="50%" preload="auto">
-          <source src={MyVideo} type="video/mp4" />
+          <ReactPlayer src={MyVideo} type="video/mp4" />
+          controls='true'
         </video>
       );
     }

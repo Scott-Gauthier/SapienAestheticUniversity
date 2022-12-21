@@ -38,28 +38,54 @@ export const ADD_USER = gql`
 //   }
 // `;
 
-export const SAVE_CONTENT = gql`
-  mutation saveContent($id: ID!) {
-    saveContent(_id: $id) {
-      savedContent {
-        _id
+
+export const ADD_ORDER = gql`
+  mutation addOrder($content: [ID]!) {
+    addOrder(content: $content) {
+      purchaseDate
+      content {
+        title
+        description
+        cost
+        image
+        video
+        creator {
+          creatorname
+          email
+        }
       }
     }
   }
 `;
 
-// export const REMOVE_CONTENT = gql`
-//    mutation removeContent($contentId: String!) {
-//      removeContent(contentId: $contentId) {
-//        username
-//        email
-//        savedContent {
-//          contentId
-//          title
-//         description
-//          cost 
-//          creator
-//        }
-//      }
-//    }
-// `;
+export const SAVE_CONTENT = gql`
+  mutation saveContent($content: SavedContentInput!) {
+    saveContent(content: $content) {
+      username
+      email
+      savedContents {
+        title
+        description
+        cost
+        image
+        video
+        creator
+      }
+    }
+  }
+`;
+
+export const REMOVE_CONTENT = gql`
+   mutation removeContent($contentId: ID!) {
+     removeContent(contentId: $contentId) {
+        savedContent {
+          contentId
+          title
+          description
+          cost 
+          creator
+       }
+     }
+   }
+`;
+

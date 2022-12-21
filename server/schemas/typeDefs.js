@@ -41,15 +41,14 @@ const typeDefs = gql`
         AllContent: [Content]
         # AllUser: User
         getUser: User
-        # GetTeacherContent: Creator
     }
 
     type Mutation {
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
         addContent(content: String!): Creator
-        saveContent(_id: ID!): User
-        removeContent(content: String!): User
+        saveContent(studentcontent: ID!): User
+        removeContent(studentcontent: ID!): [User]
     }
     `;
 

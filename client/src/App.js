@@ -7,12 +7,11 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import AppNavbar from './components/AppNavbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
-import Team from './pages/Team';
+import Instructor from './pages/Instructor';
 import Student from './pages/Student';
 import SavedClasses from './pages/SavedClasses';
 
@@ -52,8 +51,8 @@ function App() {
             element={<AboutUs/>} 
           />
           <Route 
-            path='/team' 
-            element={<Team/>} 
+            path='/instructors' 
+            element={<Instructor/>} 
           />
             <Route 
             path='/student' 
@@ -65,7 +64,7 @@ function App() {
           />
           <Route 
             path='*'
-            element={<h1 className='display-2'>Oops Under Construction! Coming Soon!</h1>}
+            element={<h1 className='display-2 text-light'>Oops Under Construction! Coming Soon!</h1>}
           />
         </Routes>
         <Footer/>
