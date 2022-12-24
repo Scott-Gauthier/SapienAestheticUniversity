@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8839eedd.css",
+    "main.js": "/static/js/main.73122272.js",
+    "static/js/787.19162989.chunk.js": "/static/js/787.19162989.chunk.js",
+    "static/media/space1.png": "/static/media/space1.b6cd7517be01fa507e5a.png",
+    "static/media/space4.png": "/static/media/space4.7f02bf62c8827962d35d.png",
+    "static/media/space6.png": "/static/media/space6.c0a2bc22cdeecf803137.png",
+    "static/media/space3.png": "/static/media/space3.28b28ec5ea8428293be6.png",
+    "static/media/space8.png": "/static/media/space8.fbbf2bc1ba04053f4465.png",
+    "static/media/space9.png": "/static/media/space9.03a3ed1740e1f3f53906.png",
+    "static/media/space2.png": "/static/media/space2.106ed51926d1476699fc.png",
+    "static/media/space10.png": "/static/media/space10.45a4d1273bd6a2eaaa27.png",
+    "static/media/space7.png": "/static/media/space7.18898e58d7377901dbb5.png",
+    "static/media/space5.png": "/static/media/space5.4c75b695977436514cca.png",
+    "static/media/MeetKristen.png": "/static/media/MeetKristen.cf3500993f412abdf69f.png",
+    "static/media/MeetJess.png": "/static/media/MeetJess.7baaa6a09a02956e72cf.png",
+    "static/media/MeetStephanie.png": "/static/media/MeetStephanie.8ec0d248dc5aaf7e7c03.png",
+    "static/media/JessHeadshot.png": "/static/media/JessHeadshot.c7c2be8ded49b8c70397.png",
+    "static/media/KristenHeadshot.png": "/static/media/KristenHeadshot.782c001521bd419e3085.png",
+    "static/media/Stephanie-stance.png.webp": "/static/media/Stephanie-stance.png.f6182efbd0327b8e8231.webp",
+    "static/media/Eclipse-Logo-Sapien.jpg": "/static/media/Eclipse-Logo-Sapien.d1cd705b2dd1a4a66b00.jpg",
+    "index.html": "/index.html",
+    "main.8839eedd.css.map": "/static/css/main.8839eedd.css.map",
+    "main.73122272.js.map": "/static/js/main.73122272.js.map",
+    "787.19162989.chunk.js.map": "/static/js/787.19162989.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8839eedd.css",
+    "static/js/main.73122272.js"
+  ]
+}
