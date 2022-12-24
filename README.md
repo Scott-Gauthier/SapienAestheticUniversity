@@ -6,7 +6,7 @@ We made this website because we wanted to introduce Sapien Aesthetic University.
 ## Mock Up
 The following animation demonstrates the application functionality:
 
-![SapienAestheticUniversity main page](./Assets/SAU.gif)
+![SapienAestheticUniversity main page](./Assets/244.gif)
 
 ## User Story 
 As a user I want to search for what I need and get the right information at the first moment. 
