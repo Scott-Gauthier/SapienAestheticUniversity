@@ -16,7 +16,7 @@ import Student from './pages/Student';
 import SavedClasses from './pages/SavedClasses';
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: 'https://sau100.herokuapp.com/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -63,7 +63,7 @@ function App() {
             element={<SavedClasses/>} 
           />
           <Route 
-            path='*'
+            path='/*'
             element={<h1 className='display-2 text-light'>Oops Under Construction! Coming Soon!</h1>}
           />
         </Routes>
