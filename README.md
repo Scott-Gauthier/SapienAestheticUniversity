@@ -6,17 +6,15 @@ We made this website because we wanted to introduce Sapien Aesthetic University.
 ## Mock Up
 The following animation demonstrates the application functionality:
 
-![SapienAestheticUniversity main page](./Assets/244.gif)
+![SapienAestheticUniversity Mock Up](./Assets/Mockup.gif)
 
 ## User Story 
 As a user I want to search for what I need and get the right information at the first moment. 
 
 * 'WHEN' user goes to the homepage
 * 'THEN' user can SEARCH for a class which they are looking for and LOGIN or SIGN Up to their own account
-
 * 'WHEN' user scrolls down 
 * 'THEN' user can see different class topics
-
 * 'WHEN' user clicks 'the heart icon'
 * 'THEN' user can save it on their account
 
@@ -43,10 +41,10 @@ As a user I want to search for what I need and get the right information at the 
 * npm
 * react
 
-## Links to Deployed Site and GitHub
+## Links to Deployed Site, GitHub and Presentation 
 * [Deployed Heroku Link](https://sau100.herokuapp.com/)
 * [Git Repository](https://github.com/ManuelaKenna/SapienAestheticUniversity)
-* Google Doc: https://docs.google.com/document/d/1_f6o84mI9TEDfKhepSmC1BKwlND1EqgElITPeeYrtr8/edit#
+* [Google Presentation](https://docs.google.com/document/d/1_f6o84mI9TEDfKhepSmC1BKwlND1EqgElITPeeYrtr8/edit#)
 
 ## Authors
 * Manuela Kenna 
