@@ -44,7 +44,7 @@ As a user I want to search for what I need and get the right information at the 
 ## Links to Deployed Site, GitHub and Presentation 
 * [Deployed Heroku Link](https://sau100.herokuapp.com/)
 * [Git Repository](https://github.com/ManuelaKenna/SapienAestheticUniversity)
-* [Google Presentation](https://docs.google.com/document/d/1_f6o84mI9TEDfKhepSmC1BKwlND1EqgElITPeeYrtr8/edit#)
+* [Google Presentation](https://docs.google.com/presentation/d/1vnZHXjSPE2f8KeeoVI1MZrVVnOJeHf74a7_mCUHoFsc/edit?usp=sharing)
 
 ## Authors
 * Manuela Kenna 
