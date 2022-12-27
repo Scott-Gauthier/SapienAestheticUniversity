@@ -26,17 +26,17 @@ export const ADD_USER = gql`
 
 
 export const SAVE_CONTENT = gql`
-  mutation saveContent($content: SavedContentInput!) {
-    saveContent(content: $content) {
+  mutation saveContent($id: String!) {
+    saveContent(id: $id) {
       username
       email
-      savedContents {
+      studentcontent {
+        _id
         title
         description
         cost
         image
         video
-        creator
       }
     }
   }
@@ -47,7 +47,7 @@ export const REMOVE_CONTENT = gql`
      removeContent(contentId: $contentId) {
       username
       email
-        savedContents {
+      studentcontent {
           title
           description
           cost

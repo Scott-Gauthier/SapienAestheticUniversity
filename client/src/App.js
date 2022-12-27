@@ -16,7 +16,7 @@ import Student from './pages/Student';
 import SavedClasses from './pages/SavedClasses';
 
 const httpLink = createHttpLink({
-  uri: 'https://sau100.herokuapp.com/graphql',
+  uri: '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {

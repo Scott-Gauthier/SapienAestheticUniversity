@@ -18,13 +18,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static(path.join(__dirname, '../client/build')));
+  // app.use(express.static(path.join(__dirname, '../client/build')));
 // }
 
-app.use(express.static(path.join(__dirname, '/public')));
+// app.use(express.static(path.join(__dirname, '/public')));
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public'));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client'));
 });
 
 // Create a new instance of an Apollo server with the GraphQL schema
@@ -34,7 +34,7 @@ const startApolloServer = async (typeDefs, resolvers) => {
 
   db.once('open', () => {
     app.listen(PORT, () => {
-      console.log(`API server running on port ${PORT}!`);
+      console.log(`API server running at http://localhost:${PORT} !`);
       console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
     })
   })

@@ -39,7 +39,7 @@ const Student = () => {
 
                   {Auth.loggedIn() ? (
                     <>
-                   <SaveButton/>
+                   <SaveButton id={element._id}/>
                    <DeleteButton/>
                     </> ) : ( <> </>
                   )}

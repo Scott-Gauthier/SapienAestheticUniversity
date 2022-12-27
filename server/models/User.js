@@ -17,7 +17,10 @@ var userSchema = new Schema({
         type: String, 
         required: true 
     },
-    studentcontent: [{
+  //   studentcontent: {
+  //     type: String, 
+  // },    
+      studentcontent: [{
       type: Schema.Types.ObjectId,
       ref: 'content',
   }],    

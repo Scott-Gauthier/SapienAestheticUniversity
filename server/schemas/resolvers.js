@@ -46,23 +46,25 @@ const resolvers = {
             return { token, user };
         },
 
-    // saveContent: async (parent, { content } , context) => {
-    //     if (context.user) {
-    //         const updatedContent = await User.findOneAndUpdate(
-    //             { _id: context.user_id },
-    //             { $addToSet: { savedContents: content }},
-    //             { new: true }
-    //         )
-    //         return updatedUser;
-    //     }
-    //     throw new AuthenticationError('You need to be logged in!')
-    // },
+    saveContent: async (parent, { id } , context) => {
+        console.log(`HIT ME BABY ONE MORE ${id}`)
+        console.log(context.user._id, context.user.email)
+        if (context.user) {
+            const updatedUser = await User.findOneAndUpdate(
+                { email: context.user.email },
+                { $addToSet: { studentcontent: { _id: id }}},
+                // { new: true }
+            )
+            return updatedUser;
+        }
+        throw new AuthenticationError('You need to be logged in!')
+    },
         
     // removeContent: async (parent, { contentId }, context) => {
     //     if (context.user) {
     //         const updatedUser = await User.findOneAndUpdate(
-    //             { _id: context.user_id },
-    //             { $pull: { savedContents: {contentId: contentId} }},
+    //             { _id: context.user._id },
+    //             { $pull: { studentcontent: {contentId: contentId} }},
     //             { new: true }                 
     //         );
     //         return updatedUser;
